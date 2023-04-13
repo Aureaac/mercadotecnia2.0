@@ -1,9 +1,5 @@
 # [Argon Dashboard Chakra](https://demos.creative-tim.com/argon-dashboard-chakra) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](10)
 
-![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/argon-dashboard-chakra.svg?maxAge=2592000)](https://github.com/creativetimofficial/argon-dashboard-chakra/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/argon-dashboard-chakra.svg?maxAge=2592000)](https://github.com/creativetimofficial/argon-dashboard-chakra/issues?q=is%3Aissue+is%3Aclosed)
-
-![Product Gif](https://i.ibb.co/WPpvjCn/argon-dashboard-chakra-free.png)
-
 Most trendiest, complex and innovative Free Chakra UI Dashboard Made by [Simmmple](https://simmmple.com?ref=readme-argonchakra) & [Creative Tim](https://creative-tim.com/?ref=readme-argonchakra). Check our latest Free Chakra UI Dashboard.
 
 Start your Development with an Innovative Admin Template for Chakra UI and React. If you like the look & feel of the hottest design trend right now, Argon Dashboard Chakra, you will fall in love with this dashboard! It features a huge number of components built to fit together and look amazing.
