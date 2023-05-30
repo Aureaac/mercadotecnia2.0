@@ -1,5 +1,6 @@
 // Chakra Icons
 import { BellIcon } from "@chakra-ui/icons";
+import logoCM from  './../logo_CM.png';
 // Chakra Imports
 import {
   Box, Button,
@@ -82,9 +83,9 @@ export default function HeaderLinks(props) {
         logo={
           <Stack direction='row' spacing='12px' align='center' justify='center'>
             {colorMode === "dark" ? (
-              <ArgonLogoLight w='74px' h='27px' />
+              <img src={logoCM}></img>
             ) : (
-              <ArgonLogoDark w='74px' h='27px' />
+              <img src={logoCM}></img>
             )}
             <Box
               w='1px'
@@ -92,9 +93,9 @@ export default function HeaderLinks(props) {
               bg={colorMode === "dark" ? "white" : "gray.700"}
             />
             {colorMode === "dark" ? (
-              <ChakraLogoLight w='82px' h='21px' />
+              <img src={logoCM}></img>
             ) : (
-              <ChakraLogoDark w='82px' h='21px' />
+              <img src={logoCM}></img>
             )}
           </Stack>
         }

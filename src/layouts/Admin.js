@@ -8,6 +8,8 @@ import {
 } from "@chakra-ui/react";
 import Configurator from "components/Configurator/Configurator";
 import Footer from "components/Footer/Footer.js";
+import logoCM from  './../components/logo_CM.png';
+
 import {
   ArgonLogoDark,
   ArgonLogoLight,
@@ -120,20 +122,15 @@ export default function Dashboard(props) {
         routes={routes}
         logo={
           <Stack direction='row' spacing='12px' align='center' justify='center'>
-            {colorMode === "dark" ? (
-              <ArgonLogoLight w='74px' h='27px' />
-            ) : (
-              <ArgonLogoDark w='74px' h='27px' />
-            )}
             <Box
               w='1px'
               h='20px'
               bg={colorMode === "dark" ? "white" : "gray.700"}
             />
             {colorMode === "dark" ? (
-              <ChakraLogoLight w='82px' h='21px' />
+              <img src={logoCM}></img>
             ) : (
-              <ChakraLogoDark w='82px' h='21px' />
+              <img src={logoCM}></img>
             )}
           </Stack>
         }
@@ -159,7 +156,7 @@ export default function Dashboard(props) {
             <PanelContainer>
               <Switch>
                 {getRoutes(routes)}
-                <Redirect from='/admin' to='/admin/dashboard' />
+                <Redirect from='/admin' to='/admin/inicio' />
               </Switch>
             </PanelContainer>
           </PanelContent>
