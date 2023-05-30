@@ -57,11 +57,11 @@ export default function AuthNavbar(props) {
         {logoText}
       </Text>
     </Link>
-  );
+  ); 
   hamburgerColor = { base: "white" };
   var linksAuth = (
     <HStack display={{ sm: "none", lg: "flex" }}>
-      <NavLink to="/admin/dashboard">
+      <NavLink to="/admin/inicio">
         <Button
           fontSize="sm"
           ms="0px"
@@ -72,7 +72,7 @@ export default function AuthNavbar(props) {
           variant="no-effects"
           leftIcon={<HomeIcon color={navbarIcon} w="12px" h="12px" me="0px" />}
         >
-          <Text>Dashboard</Text>
+          <Text>Inicio</Text>
         </Button>
       </NavLink>
       <NavLink to="/admin/profile">
@@ -144,61 +144,7 @@ export default function AuthNavbar(props) {
       alignItems="center"
       zIndex="3"
     >
-      <Flex w="100%" justifyContent={{ sm: "start", lg: "space-between" }}>
-        {brand}
-        <Box
-          ms={{ base: "auto", lg: "0px" }}
-          display={{ base: "flex", lg: "none" }}
-        >
-          <SidebarResponsive
-            hamburgerColor={hamburgerColor}
-            logoText={props.logoText}
-            secondary={props.secondary}
-            routes={routes}
-            logo={
-              <Stack
-                direction="row"
-                spacing="12px"
-                align="center"
-                justify="center"
-              >
-                {colorMode === "dark" ? (
-                  <ArgonLogoLight w="74px" h="27px" />
-                ) : (
-                  <ArgonLogoDark w="74px" h="27px" />
-                )}
-                <Box
-                  w="1px"
-                  h="20px"
-                  bg={colorMode === "dark" ? "white" : "gray.700"}
-                />
-                {colorMode === "dark" ? (
-                  <ChakraLogoLight w="82px" h="21px" />
-                ) : (
-                  <ChakraLogoDark w="82px" h="21px" />
-                )}
-              </Stack>
-            }
-            {...rest}
-          />
-        </Box>
-        {linksAuth}
-        <Link href="https://creative-tim.com/product/argon-dashboard-chakra">
-          <Button
-            bg={bgButton}
-            color={colorButton}
-            fontSize="xs"
-            variant="no-hover"
-            px="30px"
-            display={{
-              sm: "none",
-              lg: "flex",
-            }}
-          >
-            Free Download
-          </Button>
-        </Link>
-      </Flex>
+      
     </Flex>
   );
 }
