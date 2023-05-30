@@ -97,18 +97,18 @@ export const lineChartOptions = {
   xaxis: {
     type: "datetime",
     categories: [
-      "Jan",
+      "Ene",
       "Feb",
       "Mar",
-      "Apr",
+      "Abr",
       "May",
       "Jun",
       "Jul",
-      "Aug",
+      "Ago",
       "Sep",
       "Oct",
       "Nov",
-      "Dec",
+      "Dic",
     ],
     axisTicks: {
       show: false

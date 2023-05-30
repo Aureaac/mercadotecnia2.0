@@ -69,7 +69,7 @@ export default function Dashboard() {
                   color='gray.400'
                   fontWeight='bold'
                   textTransform='uppercase'>
-                  Today's Money
+                  Solicitudes aprobadas
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize='lg' color={textColor} fontWeight='bold'>
@@ -90,7 +90,7 @@ export default function Dashboard() {
               <Text as='span' color='green.400' fontWeight='bold'>
                 +3.48%{" "}
               </Text>
-              Since last month
+              Solicitudes en aprobadas
             </Text>
           </Flex>
         </Card>
@@ -108,7 +108,7 @@ export default function Dashboard() {
                   color='gray.400'
                   fontWeight='bold'
                   textTransform='uppercase'>
-                  Today's Users
+                  Solicitudes en proceso
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize='lg' color={textColor} fontWeight='bold'>
@@ -129,7 +129,7 @@ export default function Dashboard() {
               <Text as='span' color='green.400' fontWeight='bold'>
                 +5.2%{" "}
               </Text>
-              Since last month
+              Solicitudes en proceso
             </Text>
           </Flex>
         </Card>
@@ -147,7 +147,7 @@ export default function Dashboard() {
                   color='gray.400'
                   fontWeight='bold'
                   textTransform='uppercase'>
-                  New Clients
+                   Solicitudes canceladas
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize='lg' color={textColor} fontWeight='bold'>
@@ -168,7 +168,7 @@ export default function Dashboard() {
               <Text as='span' color='red.500' fontWeight='bold'>
                 -2.82%{" "}
               </Text>
-              Since last month
+              Solicitudes canceladas
             </Text>
           </Flex>
         </Card>
@@ -186,7 +186,7 @@ export default function Dashboard() {
                   color='gray.400'
                   fontWeight='bold'
                   textTransform='uppercase'>
-                  Total Sales
+                   Solicitudes finalizadas
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize='lg' color={textColor} fontWeight='bold'>
@@ -207,13 +207,13 @@ export default function Dashboard() {
               <Text as='span' color='green.400' fontWeight='bold'>
                 +8.12%{" "}
               </Text>
-              Since last month
+              Solicitudes finalizadas
             </Text>
           </Flex>
         </Card>
       </SimpleGrid>
       <Grid
-        templateColumns={{ sm: "1fr", lg: "2fr 1fr" }}
+        templateColumns={{ sm: "1fr", lg: "12fr" }}
         templateRows={{ lg: "repeat(2, auto)" }}
         gap='20px'>
         <Card
@@ -226,13 +226,12 @@ export default function Dashboard() {
           maxW={{ sm: "320px", md: "100%" }}>
           <Flex direction='column' mb='40px' p='28px 0px 0px 22px'>
             <Text color='#fff' fontSize='lg' fontWeight='bold' mb='6px'>
-              Sales Overview
+              Reporte general
             </Text>
             <Text color='#fff' fontSize='sm'>
               <Text as='span' color='green.400' fontWeight='bold'>
-                (+5) more{" "}
+                Mensual{" "}
               </Text>
-              in 2022
             </Text>
           </Flex>
           <Box minH='300px'>
@@ -242,7 +241,7 @@ export default function Dashboard() {
             />
           </Box>
         </Card>
-        <Card p='0px' maxW={{ sm: "320px", md: "100%" }}>
+        {/* <Card p='0px' maxW={{ sm: "320px", md: "100%" }}>
           <Flex direction='column' mb='40px' p='28px 0px 0px 22px'>
             <Text color='gray.400' fontSize='sm' fontWeight='bold' mb='6px'>
               PERFORMANCE
@@ -254,8 +253,8 @@ export default function Dashboard() {
           <Box minH='300px'>
             <BarChart chartData={barChartData} chartOptions={barChartOptions} />
           </Box>
-        </Card>
-        <Card p='0px' maxW={{ sm: "320px", md: "100%" }}>
+        </Card> */}
+        {/* <Card p='0px' maxW={{ sm: "320px", md: "100%" }}>
           <Flex direction='column'>
             <Flex align='center' justify='space-between' p='22px'>
               <Text fontSize='lg' color={textColor} fontWeight='bold'>
@@ -323,8 +322,8 @@ export default function Dashboard() {
               </Table>
             </Box>
           </Flex>
-        </Card>
-        <Card p='0px' maxW={{ sm: "320px", md: "100%" }}>
+        </Card> */}
+        {/* <Card p='0px' maxW={{ sm: "320px", md: "100%" }}>
           <Flex direction='column'>
             <Flex align='center' justify='space-between' p='22px'>
               <Text fontSize='lg' color={textColor} fontWeight='bold'>
@@ -392,7 +391,7 @@ export default function Dashboard() {
               </Tbody>
             </Table>
           </Box>
-        </Card>
+        </Card> */}
       </Grid>
     </Flex>
   );
