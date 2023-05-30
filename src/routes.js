@@ -5,7 +5,6 @@ import Tables from "views/Dashboard/Tables.js";
 import Billing from "views/Dashboard/Billing.js";
 import Profile from "views/Dashboard/Profile.js";
 import SignIn from "views/Pages/SignIn.js";
-import SignUp from "views/Pages/SignUp.js";
 
 import {
   HomeIcon,
@@ -13,8 +12,6 @@ import {
   CreditIcon,
   PersonIcon,
   DocumentIcon,
-  RocketIcon,
-  SupportIcon,
 } from "components/Icons/Icons";
 
 var dashRoutes = [
@@ -26,17 +23,17 @@ var dashRoutes = [
     layout: "/admin",
   },
   {
-    path: "/tables",
+    path: "/profile",
     name: "Solicitudes",
     icon: <StatsIcon color='inherit' />,
-    component: Tables,
+    component: Profile,
     layout: "/admin",
   },
   {
-    path: "/billing",
+    path: "/tables",
     name: "Historial",
     icon: <CreditIcon color='inherit' />,
-    component: Billing,
+    component: Tables,
     layout: "/admin",
   },
   {
@@ -59,13 +56,7 @@ var dashRoutes = [
         component: SignIn,
         layout: "/auth",
       },
-      // {
-      //   path: "/signup",
-      //   name: "Sign Up",
-      //   icon: <RocketIcon color='inherit' />,
-      //   component: SignUp,
-      //   layout: "/auth",
-      // },
+
     ],
   },
 ];
