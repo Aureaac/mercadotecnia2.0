@@ -5,6 +5,7 @@ import Tables from "views/Dashboard/Tables.js";
 import Billing from "views/Dashboard/Billing.js";
 import Profile from "views/Dashboard/Profile.js";
 import SignIn from "views/Pages/SignIn.js";
+import addSolicitud from "views/Dashboard/addSolicitud.js";
 
 import {
   HomeIcon,
@@ -20,13 +21,15 @@ var dashRoutes = [
     name: "Inicio",
     icon: <HomeIcon color='inherit' />,
     component: Dashboard,
+    props: 0,
     layout: "/admin",
   },
   {
     path: "/profile",
     name: "Solicitudes",
     icon: <StatsIcon color='inherit' />,
-    component: Profile,
+    component: addSolicitud,
+    props: 1,
     layout: "/admin",
   },
   {
@@ -34,6 +37,7 @@ var dashRoutes = [
     name: "Historial",
     icon: <CreditIcon color='inherit' />,
     component: Tables,
+    props: 0,
     layout: "/admin",
   },
   {
@@ -47,6 +51,7 @@ var dashRoutes = [
         icon: <PersonIcon color='inherit' />,
         secondaryNavbar: true,
         component: Profile,
+        props: 0,
         layout: "/admin",
       },
       {
@@ -54,6 +59,7 @@ var dashRoutes = [
         name: "Ejecutivas",
         icon: <DocumentIcon color='inherit' />,
         component: SignIn,
+        props: 0,
         layout: "/auth",
       },
 

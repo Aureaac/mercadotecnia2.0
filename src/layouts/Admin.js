@@ -96,6 +96,7 @@ export default function Dashboard(props) {
           <Route
             path={prop.layout + prop.path}
             component={prop.component}
+            props ={prop.props}
             key={key}
           />
         );

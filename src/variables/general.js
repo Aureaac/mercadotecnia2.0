@@ -29,14 +29,14 @@ import {
 } from "react-icons/fa";
 import { SiDropbox } from "react-icons/si";
 
-export const tablaHistorial = [
+export var tablaHistorial = [
   {
     folio: "EVENTO-001",
     sede: "Queréretaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
-  detalles: 'EVENTO SEPTIEMBRE',
+    detalles: 'EVENTO SEPTIEMBRE',
     progreso: 10,
     estatus: "Nueva",
   },
