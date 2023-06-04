@@ -7,6 +7,8 @@ import {
   Th,
   Thead,
   Tr,
+  Button,
+  MdBuild,
   useColorModeValue
 } from "@chakra-ui/react";
 // Custom components
@@ -49,7 +51,7 @@ function Tables() {
                 <Th color="gray.400" borderColor={borderColor}>Progreso</Th>
                 <Th color="gray.400" borderColor={borderColor}>Estatus</Th>
 
-                <Th></Th>
+                <Th>Acciones</Th>
               </Tr>
             </Thead>
             <Tbody>
@@ -65,6 +67,9 @@ function Tables() {
                     detalles={row.detalles}
                     progreso={row.progreso}
                     estatus={row.estatus}
+                    accion={<Button  colorScheme='pink' variant='solid'>
+                    Settings
+                  </Button>}
                     
                     isLast={index === arr.length - 1 ? true : false}
                     key={index}

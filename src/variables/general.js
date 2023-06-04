@@ -39,6 +39,7 @@ export var tablaHistorial = [
     detalles: 'EVENTO SEPTIEMBRE',
     progreso: 10,
     estatus: "Nueva",
+    accion:""
   },
   {
     folio: "EVENTO-002",
@@ -49,6 +50,7 @@ export var tablaHistorial = [
   detalles: 'EVENTO SEPTIEMBRE',
     progreso: 16,
     estatus: "Nueva",
+    accion:""
   },
   {
     folio: "EVENTO-003",
@@ -59,6 +61,7 @@ export var tablaHistorial = [
     detalles: 'EVENTO SEPTIEMBRE',
     progreso: 28,
     estatus: "Nueva",
+    accion:""
   },
   {
     folio: "EVENTO-004",
@@ -69,6 +72,7 @@ export var tablaHistorial = [
     detalles: 'EVENTO SEPTIEMBRE',
     progreso: 30,
     estatus: "Nueva",
+    accion:""
   },
   {
     folio: "EVENTO-005",
@@ -79,6 +83,7 @@ export var tablaHistorial = [
     detalles: 'EVENTO SEPTIEMBRE',
     progreso: 40,
     estatus: "Nueva",
+    accion:""
   },
   {
     folio: "EVENTO-006",
@@ -89,6 +94,7 @@ export var tablaHistorial = [
     detalles: 'EVENTO SEPTIEMBRE',
     progreso: 50,
     estatus: "Nueva",
+    accion:""
   },
 ];
 
