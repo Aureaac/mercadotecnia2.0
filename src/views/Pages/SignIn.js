@@ -54,10 +54,7 @@ function SignIn() {
             mx={{ base: "100px" }}
             m={{ base: "20px", md: "auto" }}
             bg={bgForm}
-            boxShadow={useColorModeValue(
-              "0px 5px 14px rgba(0, 0, 0, 0.05)",
-              "unset"
-            )}>
+            boxShadow={useColorModeValue("0px 5px 14px rgba(0, 0, 0, 0.05)", "unset")}>
             <Text
               fontSize='xl'
               color={textColor}

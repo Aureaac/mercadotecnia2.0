@@ -95,9 +95,9 @@ export default function Pages(props) {
           </Switch>
         </Box>
       </Box>
-      <Box px='24px' mx='auto' width='1044px' maxW='100%' mt='60px'>
-        <Footer />
-      </Box>
+      {/* <Box px='24px' mx='auto' width='1044px' maxW='100%' mt='60px'> */}
+        {/* <Footer /> */}
+      {/* </Box> */}
     </Box>
   );
 }

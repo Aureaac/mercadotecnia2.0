@@ -23,6 +23,7 @@ import AuthLayout from "layouts/Auth.js";
 import AdminLayout from "layouts/Admin.js";
 import RTLLayout from "layouts/RTL.js"; // Chakra imports
 import { ChakraProvider } from "@chakra-ui/react";
+
 // Custom Chakra theme
 import theme from "theme/theme.js";
  
