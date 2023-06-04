@@ -9,6 +9,7 @@ import {
   Icon,
   Image,
   Link,
+  Select,
   Switch,
   Text,
   useColorMode,
@@ -24,6 +25,7 @@ import ImageArchitect1 from "assets/img/ImageArchitect1.png";
 import ImageArchitect2 from "assets/img/ImageArchitect2.png";
 import ImageArchitect3 from "assets/img/ImageArchitect3.png";
 // Custom components
+import { Input } from "@chakra-ui/react"
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 import CardHeader from "components/Card/CardHeader";
@@ -50,111 +52,40 @@ function Profile() {
 
   return (
     <Flex direction='column' pt={{ base: "120px", md: "75px", lg: "100px" }}>
-      <Flex
-        direction={{ sm: "column", md: "row" }}
-        mb='24px'
-        maxH='330px'
-        justifyContent={{ sm: "center", md: "space-between" }}
-        align='center'
-        backdropFilter='blur(21px)'
-        boxShadow='0px 2px 5.5px rgba(0, 0, 0, 0.02)'
-        border='1.5px solid'
-        borderColor={borderProfileColor}
-        bg={bgProfile}
-        p='24px'
-        borderRadius='20px'>
-        <Flex
-          align='center'
-          mb={{ sm: "10px", md: "0px" }}
-          direction={{ sm: "column", md: "row" }}
-          w={{ sm: "100%" }}
-          textAlign={{ sm: "center", md: "start" }}>
-          <Avatar
-            me={{ md: "22px" }}
-            src={avatar5}
-            w='80px'
-            h='80px'
-            borderRadius='15px'
-          />
-          <Flex direction='column' maxWidth='100%' my={{ sm: "14px" }}>
-            <Text
-              fontSize={{ sm: "lg", lg: "xl" }}
-              color={textColor}
-              fontWeight='bold'
-              ms={{ sm: "8px", md: "0px" }}>
-              Alec Thompson
-            </Text>
-            <Text
-              fontSize={{ sm: "sm", md: "md" }}
-              color={emailColor}
-              fontWeight='semibold'>
-              alec@simmmple.com
-            </Text>
-          </Flex>
-        </Flex>
-        <Flex
-          direction={{ sm: "column", lg: "row" }}
-          w={{ sm: "100%", md: "50%", lg: "auto" }}>
-          <Button p='0px' bg='transparent' variant='no-effects'>
-            <Flex
-              align='center'
-              w={{ sm: "100%", lg: "135px" }}
-              bg={colorMode === "dark" ? "navy.900" : "#fff"}
-              borderRadius='8px'
-              justifyContent='center'
-              py='10px'
-              boxShadow='0px 2px 5.5px rgba(0, 0, 0, 0.06)'
-              cursor='pointer'>
-              <Icon color={textColor} as={FaCube} me='6px' />
-              <Text fontSize='xs' color={textColor} fontWeight='bold'>
-                OVERVIEW
-              </Text>
-            </Flex>
-          </Button>
-          <Button p='0px' bg='transparent' variant='no-effects'>
-            <Flex
-              align='center'
-              w={{ lg: "135px" }}
-              borderRadius='15px'
-              justifyContent='center'
-              py='10px'
-              mx={{ lg: "1rem" }}
-              cursor='pointer'>
-              <Icon color={textColor} as={IoDocumentsSharp} me='6px' />
-              <Text fontSize='xs' color={textColor} fontWeight='bold'>
-                TEAMS
-              </Text>
-            </Flex>
-          </Button>
-          <Button p='0px' bg='transparent' variant='no-effects'>
-            <Flex
-              align='center'
-              w={{ lg: "135px" }}
-              borderRadius='15px'
-              justifyContent='center'
-              py='10px'
-              cursor='pointer'>
-              <Icon color={textColor} as={FaPenFancy} me='6px' />
-              <Text fontSize='xs' color={textColor} fontWeight='bold'>
-                PROJECTS
-              </Text>
-            </Flex>
-          </Button>
-        </Flex>
-      </Flex>
-
-      <Grid templateColumns={{ sm: "1fr", xl: "repeat(3, 1fr)" }} gap='22px'>
+ 
+      <Grid templateColumns={{ sm: "12fr", xl:  "12fr" }} gap='22px'>
         <Card p='16px'>
           <CardHeader p='12px 5px' mb='12px'>
             <Text fontSize='lg' color={textColor} fontWeight='bold'>
-              Platform Settings
+              Crear una nueva solicitud
             </Text>
           </CardHeader>
+
+          <form>
+      <div>
+        <label htmlFor="email">Email</label>
+        <input id="email" type="text" />
+      </div>
+      <div>
+        <label htmlFor="password">Password</label>
+        <input id="password" type="password" />
+      </div>
+      <button>Submit</button>
+    </form>
+
+
           <CardBody px='5px'>
             <Flex direction='column'>
               <Text fontSize='sm' color='gray.400' fontWeight='600' mb='20px'>
-                ACCOUNT
+                Tipo de orden
               </Text>
+              <Input placeholder="small size" size="md" />
+              <Select>
+                <option value="someOption" disabled selected>Selecciona una opción</option>
+                <option value="otherOption">Material</option>
+                <option value="otherOption">Evento</option>
+                </Select>
+              {/* <input placeholder="Name" type="date" onChange={event => setName(event.target.value)} value={name} required/> */}
               <Flex align='center' mb='20px'>
                 <Switch colorScheme='blue' me='10px' />
                 <Text
@@ -225,7 +156,7 @@ function Profile() {
             </Flex>
           </CardBody>
         </Card>
-        <Card p='16px' my={{ sm: "24px", xl: "0px" }}>
+        {/* <Card p='16px' my={{ sm: "24px", xl: "0px" }}>
           <CardHeader p='12px 5px' mb='12px'>
             <Text fontSize='lg' color={textColor} fontWeight='bold'>
               Profile Information
@@ -324,160 +255,10 @@ function Profile() {
               </Flex>
             </Flex>
           </CardBody>
-        </Card>
-        <Card p='16px'>
-          <CardHeader p='12px 5px' mb='12px'>
-            <Text fontSize='lg' color={textColor} fontWeight='bold'>
-              Conversations
-            </Text>
-          </CardHeader>
-          <CardBody px='5px'>
-            <Flex direction='column' w='100%'>
-              <Flex justifyContent='space-between' mb='21px'>
-                <Flex align='center'>
-                  <Avatar
-                    src={avatar2}
-                    w='50px'
-                    h='50px'
-                    borderRadius='15px'
-                    me='10px'
-                  />
-                  <Flex direction='column'>
-                    <Text fontSize='sm' color={textColor} fontWeight='bold'>
-                      Sophie B.{" "}
-                    </Text>
-                    <Text fontSize='xs' color='gray.400' fontWeight='400'>
-                      Hi! I need more information...
-                    </Text>
-                  </Flex>
-                </Flex>
-                <Button p='0px' bg='transparent' variant='no-effects'>
-                  <Text
-                    fontSize='10px'
-                    fontWeight='700'
-                    color={iconColor}
-                    alignSelf='center'>
-                    REPLY
-                  </Text>
-                </Button>
-              </Flex>
-              <Flex justifyContent='space-between' mb='21px'>
-                <Flex align='center'>
-                  <Avatar
-                    src={avatar3}
-                    w='50px'
-                    h='50px'
-                    borderRadius='15px'
-                    me='10px'
-                  />
-                  <Flex direction='column'>
-                    <Text fontSize='sm' color={textColor} fontWeight='bold'>
-                      Sophie B.{" "}
-                    </Text>
-                    <Text fontSize='xs' color='gray.400' fontWeight='400'>
-                      Awesome work, can you change...
-                    </Text>
-                  </Flex>
-                </Flex>
-                <Button p='0px' bg='transparent' variant='no-effects'>
-                  <Text
-                    fontSize='10px'
-                    fontWeight='700'
-                    color={iconColor}
-                    alignSelf='center'>
-                    REPLY
-                  </Text>
-                </Button>
-              </Flex>
-              <Flex justifyContent='space-between' mb='21px'>
-                <Flex align='center'>
-                  <Avatar
-                    src={avatar4}
-                    w='50px'
-                    h='50px'
-                    borderRadius='15px'
-                    me='10px'
-                  />
-                  <Flex direction='column'>
-                    <Text fontSize='sm' color={textColor} fontWeight='bold'>
-                      Sophie B.{" "}
-                    </Text>
-                    <Text fontSize='xs' color='gray.400' fontWeight='400'>
-                      Have a great afternoon...
-                    </Text>
-                  </Flex>
-                </Flex>
-                <Button p='0px' bg='transparent' variant='no-effects'>
-                  <Text
-                    fontSize='10px'
-                    fontWeight='700'
-                    color={iconColor}
-                    alignSelf='center'>
-                    REPLY
-                  </Text>
-                </Button>
-              </Flex>
-              <Flex justifyContent='space-between' mb='21px'>
-                <Flex align='center'>
-                  <Avatar
-                    src={avatar5}
-                    w='50px'
-                    h='50px'
-                    borderRadius='15px'
-                    me='10px'
-                  />
-                  <Flex direction='column'>
-                    <Text fontSize='sm' color={textColor} fontWeight='bold'>
-                      Sophie B.{" "}
-                    </Text>
-                    <Text fontSize='xs' color='gray.400' fontWeight='400'>
-                      About files I can...
-                    </Text>
-                  </Flex>
-                </Flex>
-                <Button p='0px' bg='transparent' variant='no-effects'>
-                  <Text
-                    fontSize='10px'
-                    fontWeight='700'
-                    color={iconColor}
-                    alignSelf='center'>
-                    REPLY
-                  </Text>
-                </Button>
-              </Flex>
-              <Flex justifyContent='space-between' mb='21px'>
-                <Flex align='center'>
-                  <Avatar
-                    src={avatar6}
-                    w='50px'
-                    h='50px'
-                    borderRadius='15px'
-                    me='10px'
-                  />
-                  <Flex direction='column'>
-                    <Text fontSize='sm' color={textColor} fontWeight='bold'>
-                      Sophie B.{" "}
-                    </Text>
-                    <Text fontSize='xs' color='gray.400' fontWeight='400'>
-                      About files I can...
-                    </Text>
-                  </Flex>
-                </Flex>
-                <Button p='0px' bg='transparent' variant='no-effects'>
-                  <Text
-                    fontSize='10px'
-                    fontWeight='700'
-                    color={iconColor}
-                    alignSelf='center'>
-                    REPLY
-                  </Text>
-                </Button>
-              </Flex>
-            </Flex>
-          </CardBody>
-        </Card>
+        </Card> */}
+        
       </Grid>
-      <Card p='16px' my='24px'>
+      {/* <Card p='16px' my='24px'>
         <CardHeader p='12px 5px' mb='12px'>
           <Flex direction='column'>
             <Text fontSize='lg' color={textColor} fontWeight='bold'>
@@ -625,7 +406,7 @@ function Profile() {
             </Button>
           </Grid>
         </CardBody>
-      </Card>
+      </Card> */}
     </Flex>
   );
 }
