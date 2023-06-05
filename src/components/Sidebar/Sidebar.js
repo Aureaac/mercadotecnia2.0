@@ -30,6 +30,7 @@ import { SidebarHelp } from "components/Sidebar/SidebarHelp";
 import React from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import { NavLink, useLocation } from "react-router-dom";
+import logoCMWhite from  '../../assets/img/Logo_CM_white.png';
 
 
 
@@ -46,15 +47,15 @@ function Sidebar(props) {
   const activeRoute = (routeName) => {
     return location.pathname === routeName ? "active" : "";
   };
-  const { colorMode } = useColorMode;
+  // const { colorMode } = useColorMode;
   // this function creates the links and collapses that appear in the sidebar (left menu)
   const { sidebarVariant } = props;
   const createLinks = (routes) => {
     // Chakra Color Mode
-    let activeBg = useColorModeValue("white", "navy.700");
+    let activeBg = useColorModeValue("transparent", "navy.700");
     let inactiveBg = useColorModeValue("white", "navy.700");
-    let activeColor = useColorModeValue("gray.700", "white");
-    let inactiveColor = useColorModeValue("gray.400", "gray.400");
+    let activeColor = "white";
+    let inactiveColor = "white";
     let sidebarActiveShadow = "0px 7px 11px rgba(0, 0, 0, 0.04)";
     return routes.map((prop, key) => {
       if (prop.redirect) {
@@ -67,7 +68,7 @@ function Sidebar(props) {
           <>
             <Text
               color={activeColor}
-              fontWeight="bold"
+              fontWeight="300"
               mb={{
                 xl: "6px",
               }}
@@ -206,10 +207,7 @@ function Sidebar(props) {
   let sidebarRadius = "20px";
   let sidebarMargins = "0px";
   var brand = (
-    <Box pt={"25px"} mb="12px">
-      {logo}
-      <HSeparator my="26px" />
-    </Box>
+     <Box pt={"25px"} bgImage={logoCMWhite} w={{ md: "95%" }} h={{ md: "10vh" }} bgSize='contain' bgRepeat='no-repeat' mt='45px'></Box>
   );
 
   // SIDEBAR
@@ -217,7 +215,7 @@ function Sidebar(props) {
     <Box ref={mainPanel}>
       <Box display={{ sm: "none", xl: "block" }} position="fixed">
         <Box
-          bg={sidebarBg}
+          bg='#00263A'
           transition={variantChange}
           w="260px"
           maxW="260px"
@@ -300,7 +298,7 @@ export function SidebarResponsive(props) {
           <>
             <Text
               color={activeColor}
-              fontWeight="bold"
+              fontWeight="300"
               mb={{
                 xl: "6px",
               }}

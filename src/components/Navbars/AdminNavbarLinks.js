@@ -1,6 +1,6 @@
 // Chakra Icons
 import { BellIcon } from "@chakra-ui/icons";
-import logoCM from  './../logo_CM.png';
+import logoCM from  '../../assets/img/Logo_CM_white.png';
 // Chakra Imports
 import {
   Box, Button,
@@ -59,23 +59,23 @@ export default function HeaderLinks(props) {
           ms='0px'
           px='0px'
           me={{ sm: "2px", md: "16px" }}
-          color={navbarIcon}
+          color='black'
           variant='no-effects'
           rightIcon={
             document.documentElement.dir ? (
               ""
             ) : (
-              <ProfileIcon color={navbarIcon} w='22px' h='22px' me='0px' />
+              <ProfileIcon color='black' w='22px' h='22px' me='0px' />
             )
           }
           leftIcon={
             document.documentElement.dir ? (
-              <ProfileIcon color={navbarIcon} w='22px' h='22px' me='0px' />
+              <ProfileIcon color='black' w='22px' h='22px' me='0px' />
             ) : (
               ""
             )
           }>
-          <Text display={{ sm: "none", md: "flex" }}>Sign In</Text>
+          <Text display={{ sm: "none", md: "flex" }}>Sign out</Text>
         </Button>
       </NavLink>
       <SidebarResponsive
@@ -109,13 +109,13 @@ export default function HeaderLinks(props) {
         ms={{ base: "16px", xl: "0px" }}
         me='16px'
         onClick={props.onOpen}
-        color={navbarIcon}
+        color='black'
         w='18px'
         h='18px'
       />
       <Menu>
         <MenuButton>
-          <BellIcon color={navbarIcon} w='18px' h='18px' />
+          <BellIcon color='black' w='18px' h='18px' />
         </MenuButton>
         <MenuList p='16px 8px' bg={menuBg}>
           <Flex flexDirection='column'>

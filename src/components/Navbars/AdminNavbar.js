@@ -122,21 +122,21 @@ export default function AdminNavbar(props) {
       >
         <Box mb={{ sm: "8px", md: "0px" }}>
           <Breadcrumb>
-            <BreadcrumbItem color={mainText}>
-              <BreadcrumbLink href="#" color={secondaryText}>
+            <BreadcrumbItem color='black'>
+              <BreadcrumbLink href="#" color='black'>
                 Mercadotecnia
               </BreadcrumbLink>
             </BreadcrumbItem>
 
-            <BreadcrumbItem color={mainText}>
-              <BreadcrumbLink href="#" color={mainText}>
+            <BreadcrumbItem color='black'>
+              <BreadcrumbLink href="#" color='black'>
                 {brandText}
               </BreadcrumbLink>
             </BreadcrumbItem>
           </Breadcrumb>
           {/* Here we create navbar brand, based on route name */}
           <Link
-            color={mainText}
+            color='black'
             href="#"
             bg="inherit"
             borderRadius="inherit"

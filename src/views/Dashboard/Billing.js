@@ -61,7 +61,7 @@ function Billing() {
             <Card
               backgroundImage={
                 colorMode === "dark"
-                  ? "linear-gradient(180deg, #3182CE 0%, #63B3ED 100%)"
+                  ? "linear-gradient(180deg, #fff 0%, #63B3ED 100%)"
                   : BackgroundCard1
               }
               backgroundRepeat='no-repeat'

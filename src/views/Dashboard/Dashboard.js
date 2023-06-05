@@ -34,8 +34,6 @@ import {
 import React from "react";
 // Variables
 import {
-  barChartData,
-  barChartOptions,
   lineChartData,
   lineChartOptions,
 } from "variables/charts";
@@ -220,15 +218,15 @@ export default function Dashboard() {
           bg={
             colorMode === "dark"
               ? "navy.800"
-              : "linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%)"
+              : "linear-gradient(81.62deg, #fff 2.25%, #fff 79.87%)"
           }
           p='0px'
           maxW={{ sm: "320px", md: "100%" }}>
           <Flex direction='column' mb='40px' p='28px 0px 0px 22px'>
-            <Text color='#fff' fontSize='lg' fontWeight='bold' mb='6px'>
+            <Text color='#333' fontSize='lg' fontWeight='bold' mb='6px'>
               Reporte general
             </Text>
-            <Text color='#fff' fontSize='sm'>
+            <Text color='#333' fontSize='sm'>
               <Text as='span' color='green.400' fontWeight='bold'>
                 Mensual{" "}
               </Text>

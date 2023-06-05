@@ -6,8 +6,8 @@ import {
   Box,
   useColorMode,
 } from "@chakra-ui/react";
-import Configurator from "components/Configurator/Configurator";
-import Footer from "components/Footer/Footer.js";
+// import Configurator from "components/Configurator/Configurator";
+// import Footer from "components/Footer/Footer.js";
 import logoCM from  './../components/logo_CM.png';
 
 import {
@@ -110,15 +110,6 @@ export default function Dashboard(props) {
   // Chakra Color Mode
   return (
     <Box>
-      <Box
-        minH='40vh'
-        w='100%'
-        position='absolute'
-        bgImage={colorMode === "light" ? bgAdmin : "none"}
-        bg={colorMode === "light" ? bgAdmin : "navy.900"}
-        bgSize='cover'
-        top='0'
-      />
       <Sidebar
         routes={routes}
         logo={
@@ -162,7 +153,7 @@ export default function Dashboard(props) {
             </PanelContainer>
           </PanelContent>
         ) : null}
-        <Footer />
+        {/* <Footer /> */}
         <Portal>
           <FixedPlugin
             secondary={getActiveNavbar(routes)}
@@ -170,7 +161,7 @@ export default function Dashboard(props) {
             onOpen={onOpen}
           />
         </Portal>
-        <Configurator
+        {/* <Configurator
           secondary={getActiveNavbar(routes)}
           isOpen={isOpen}
           onClose={onClose}
@@ -178,7 +169,7 @@ export default function Dashboard(props) {
           onSwitch={(value) => {
             setFixed(value);
           }}
-        />
+        /> */}
       </MainPanel>
     </Box>
   );

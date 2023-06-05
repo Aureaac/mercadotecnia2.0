@@ -7,8 +7,8 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { RtlProvider } from "components/RTLProvider/RTLProvider";
-import Configurator from "components/Configurator/Configurator";
-import Footer from "components/Footer/Footer.js";
+// import Configurator from "components/Configurator/Configurator";
+// import Footer from "components/Footer/Footer.js";
 // Layout components
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
@@ -169,7 +169,7 @@ export default function Dashboard(props) {
             </PanelContainer>
           </PanelContent>
         ) : null}
-        <Footer />
+        {/* <Footer /> */}
         <Portal>
           <FixedPlugin
             secondary={getActiveNavbar(routes)}
@@ -177,14 +177,14 @@ export default function Dashboard(props) {
             onOpen={onOpen}
           />
         </Portal>
-        <Configurator
+        {/* <Configurator
           secondary={getActiveNavbar(routes)}
           isOpen={isOpen}
           onClose={onClose}
           isChecked={fixed}
           onSwitch={(value) => {
             setFixed(value);
-          }}
+          }} */}
           onOpaque={() => setSidebarVariant("opaque")}
           onTransparent={() => setSidebarVariant("transparent")}
         />
