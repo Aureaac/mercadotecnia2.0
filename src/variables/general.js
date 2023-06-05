@@ -98,6 +98,148 @@ export var tablaHistorial = [
   },
 ];
 
+
+
+export var tablaUsuarios = [
+  {
+    folio: "EVENTO-001",
+    sede: "Querétaro",
+    solicitante: "James Blue",
+    fecha_solicitud: "1 Jun 2023",
+    fecha_entrega: "14 Jun 2023",
+    detalles: 'EVENTO SEPTIEMBRE',
+    progreso: 10,
+    estatus: "Nueva",
+    accion:""
+  },
+  {
+    folio: "EVENTO-002",
+    sede: "Querétaro",
+    solicitante: "James Blue",
+    fecha_solicitud: "1 Jun 2023",
+    fecha_entrega: "14 Jun 2023",
+  detalles: 'EVENTO SEPTIEMBRE',
+    progreso: 16,
+    estatus: "Nueva",
+    accion:""
+  },
+  {
+    folio: "EVENTO-003",
+    sede: "Querétaro",
+    solicitante: "James Blue",
+    fecha_solicitud: "1 Jun 2023",
+    fecha_entrega: "14 Jun 2023",
+    detalles: 'EVENTO SEPTIEMBRE',
+    progreso: 28,
+    estatus: "Nueva",
+    accion:""
+  },
+  {
+    folio: "EVENTO-004",
+    sede: "Querétaro",
+    solicitante: "James Blue",
+    fecha_solicitud: "1 Jun 2023",
+    fecha_entrega: "14 Jun 2023",
+    detalles: 'EVENTO SEPTIEMBRE',
+    progreso: 30,
+    estatus: "Nueva",
+    accion:""
+  },
+  {
+    folio: "EVENTO-005",
+    sede: "Querétaro",
+    solicitante: "James Blue",
+    fecha_solicitud: "1 Jun 2023",
+    fecha_entrega: "14 Jun 2023",
+    detalles: 'EVENTO SEPTIEMBRE',
+    progreso: 40,
+    estatus: "Nueva",
+    accion:""
+  },
+  {
+    folio: "EVENTO-006",
+    sede: "Querétaro",
+    solicitante: "James Blue",
+    fecha_solicitud: "1 Jun 2023",
+    fecha_entrega: "14 Jun 2023",
+    detalles: 'EVENTO SEPTIEMBRE',
+    progreso: 50,
+    estatus: "Nueva",
+    accion:""
+  },
+];
+
+
+export var tablaEjecutivas = [
+  {
+    folio: "EVENTO-001",
+    sede: "Querétaro",
+    solicitante: "James Blue",
+    fecha_solicitud: "1 Jun 2023",
+    fecha_entrega: "14 Jun 2023",
+    detalles: 'EVENTO SEPTIEMBRE',
+    progreso: 10,
+    estatus: "Nueva",
+    accion:""
+  },
+  {
+    folio: "EVENTO-002",
+    sede: "Querétaro",
+    solicitante: "James Blue",
+    fecha_solicitud: "1 Jun 2023",
+    fecha_entrega: "14 Jun 2023",
+  detalles: 'EVENTO SEPTIEMBRE',
+    progreso: 16,
+    estatus: "Nueva",
+    accion:""
+  },
+  {
+    folio: "EVENTO-003",
+    sede: "Querétaro",
+    solicitante: "James Blue",
+    fecha_solicitud: "1 Jun 2023",
+    fecha_entrega: "14 Jun 2023",
+    detalles: 'EVENTO SEPTIEMBRE',
+    progreso: 28,
+    estatus: "Nueva",
+    accion:""
+  },
+  {
+    folio: "EVENTO-004",
+    sede: "Querétaro",
+    solicitante: "James Blue",
+    fecha_solicitud: "1 Jun 2023",
+    fecha_entrega: "14 Jun 2023",
+    detalles: 'EVENTO SEPTIEMBRE',
+    progreso: 30,
+    estatus: "Nueva",
+    accion:""
+  },
+  {
+    folio: "EVENTO-005",
+    sede: "Querétaro",
+    solicitante: "James Blue",
+    fecha_solicitud: "1 Jun 2023",
+    fecha_entrega: "14 Jun 2023",
+    detalles: 'EVENTO SEPTIEMBRE',
+    progreso: 40,
+    estatus: "Nueva",
+    accion:""
+  },
+  {
+    folio: "EVENTO-006",
+    sede: "Querétaro",
+    solicitante: "James Blue",
+    fecha_solicitud: "1 Jun 2023",
+    fecha_entrega: "14 Jun 2023",
+    detalles: 'EVENTO SEPTIEMBRE',
+    progreso: 50,
+    estatus: "Nueva",
+    accion:""
+  },
+];
+
+
 export const invoicesData = [
   {
     date: "March, 01, 2020",

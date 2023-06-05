@@ -27,7 +27,7 @@ var dashRoutes = [
   },
   {
     path: "/profile",
-    name: "Solicitudes",
+    name: "Nueva Solicitud",
     icon: <StatsIcon color='inherit' />,
     component: addSolicitud,
     props: 1,
@@ -35,7 +35,7 @@ var dashRoutes = [
   },
   {
     path: "/tables",
-    name: "Historial",
+    name: "En proceso",
     icon: <CreditIcon color='inherit' />,
     component: Tables,
     props: 0,
@@ -43,7 +43,7 @@ var dashRoutes = [
   },
   {
     path: "/historial_2",
-    name: "Historial 2",
+    name: "Historial",
     icon: <CreditIcon color='inherit' />,
     component: Historial,
     props: 0,
