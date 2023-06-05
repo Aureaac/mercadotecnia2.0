@@ -76,22 +76,18 @@ function addSolicitud(props) {
   
 
   const [values, setValues] = useState({
-    descripcion: '',
+    folio: "EVENTO-007",
+    sede: "Querétero",
+    solicitante: "Joe Baiden",
+    fecha_solicitud: "02 Jun 2023",
+    fecha_entrega: "",
+    detalles: '',
+    progreso: 10,
+    estatus: "Nueva",
+    accion:""
   });
 
   function handleChange(evt) {
-    /*
-      evt.target es el elemento que ejecuto el evento
-      name identifica el input y value describe el valor actual
-    */
-    
-
-    /*
-      Este snippet:
-      1. Clona el estado actual
-      2. Reemplaza solo el valor del
-         input que ejecutó el evento
-    */
          setValues({
           ...values,
           [evt.target.name] : evt.target.value
@@ -99,14 +95,11 @@ function addSolicitud(props) {
    console.log(evt.target.name)
 
   }
-  //useEffect(() => {
     function handleSelect(data) {
       setSelectedOptions(data);
-     // setSelectedOptions(selectedOptions => [...selectedOptions, data]);
 
       console.log(selectedOptions);
     }
-  //},[selectedOptions]);
   
   let handleInputChange = (e) => {
     let inputValue = e.target.value
@@ -116,6 +109,7 @@ function addSolicitud(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(values)
+    tablaHistorial.push(values)
    
 }
   const tiempoTranscurrido = Date.now();

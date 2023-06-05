@@ -32,63 +32,69 @@ import { SiDropbox } from "react-icons/si";
 export var tablaHistorial = [
   {
     folio: "EVENTO-001",
-    sede: "Queréretaro",
+    sede: "Querétaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
     detalles: 'EVENTO SEPTIEMBRE',
     progreso: 10,
     estatus: "Nueva",
+    accion:""
   },
   {
     folio: "EVENTO-002",
-    sede: "Queréretaro",
+    sede: "Querétaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
   detalles: 'EVENTO SEPTIEMBRE',
     progreso: 16,
     estatus: "Nueva",
+    accion:""
   },
   {
     folio: "EVENTO-003",
-    sede: "Queréretaro",
+    sede: "Querétaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
     detalles: 'EVENTO SEPTIEMBRE',
     progreso: 28,
     estatus: "Nueva",
+    accion:""
   },
   {
     folio: "EVENTO-004",
-    sede: "Queréretaro",
+    sede: "Querétaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
     detalles: 'EVENTO SEPTIEMBRE',
     progreso: 30,
     estatus: "Nueva",
+    accion:""
   },
   {
     folio: "EVENTO-005",
-    sede: "Queréretaro",
+    sede: "Querétaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
     detalles: 'EVENTO SEPTIEMBRE',
     progreso: 40,
     estatus: "Nueva",
+    accion:""
   },
   {
     folio: "EVENTO-006",
-    sede: "Queréretaro",
+    sede: "Querétaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
     detalles: 'EVENTO SEPTIEMBRE',
     progreso: 50,
     estatus: "Nueva",
+    accion:""
   },
 ];
 

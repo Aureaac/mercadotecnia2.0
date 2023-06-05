@@ -2,9 +2,11 @@
 import React, { Component }  from 'react';
 import Dashboard from "views/Dashboard/Dashboard.js";
 import Tables from "views/Dashboard/Tables.js";
+import Billing from "views/Dashboard/Billing.js";
 import Profile from "views/Dashboard/Profile.js";
 import SignIn from "views/Pages/SignIn.js";
 import addSolicitud from "views/Dashboard/addSolicitud.js";
+import Historial from "views/Dashboard/Historial.js";
 
 import {
   HomeIcon,
@@ -39,48 +41,38 @@ var dashRoutes = [
     props: 0,
     layout: "/admin",
   },
-  // {
-  //   name: "Administrador",
-  //   category: "account",
-  //   state: "pageCollapse",
-  //   views: [
-  //     {
-  //       path: "/profile",
-  //       name: "Usuarios",
-  //       icon: <PersonIcon color='inherit' />,
-  //       secondaryNavbar: true,
-  //       component: Profile,
-  //       props: 0,
-  //       layout: "/admin",
-  //     },
-  //     {
-  //       path: "/signin",
-  //       name: "Ejecutivas",
-  //       icon: <DocumentIcon color='inherit' />,
-  //       component: SignIn,
-  //       props: 0,
-  //       layout: "/auth",
-  //     },
-
-  //   ],
-  // },
   {
-    path: "/usuarios",
-    name: "Usuarios",
-    icon: <PersonIcon color='inherit' />,
-    secondaryNavbar: true,
-    component: Profile,
+    path: "/historial_2",
+    name: "Historial 2",
+    icon: <CreditIcon color='inherit' />,
+    component: Historial,
     props: 0,
     layout: "/admin",
   },
   {
-    path: "/signin",
-    name: "Ejecutivas",
-    icon: <DocumentIcon color='inherit' />,
-    component: SignIn,
-    props: 0,
-    layout: "/auth",
-  },
+    name: "Administrador",
+    category: "account",
+    state: "pageCollapse",
+    views: [
+      {
+        path: "/profile",
+        name: "Usuarios",
+        icon: <PersonIcon color='inherit' />,
+        secondaryNavbar: true,
+        component: Profile,
+        props: 0,
+        layout: "/admin",
+      },
+      {
+        path: "/signin",
+        name: "Ejecutivas",
+        icon: <DocumentIcon color='inherit' />,
+        component: SignIn,
+        props: 0,
+        layout: "/auth",
+      },
 
+    ],
+  },
 ];
 export default dashRoutes;
