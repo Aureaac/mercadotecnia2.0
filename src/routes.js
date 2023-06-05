@@ -6,6 +6,7 @@ import Billing from "views/Dashboard/Billing.js";
 import Profile from "views/Dashboard/Profile.js";
 import SignIn from "views/Pages/SignIn.js";
 import addSolicitud from "views/Dashboard/addSolicitud.js";
+import Historial from "views/Dashboard/Historial.js";
 
 import {
   HomeIcon,
@@ -37,6 +38,14 @@ var dashRoutes = [
     name: "Historial",
     icon: <CreditIcon color='inherit' />,
     component: Tables,
+    props: 0,
+    layout: "/admin",
+  },
+  {
+    path: "/historial_2",
+    name: "Historial 2",
+    icon: <CreditIcon color='inherit' />,
+    component: Historial,
     props: 0,
     layout: "/admin",
   },

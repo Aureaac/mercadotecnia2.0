@@ -32,7 +32,7 @@ import { SiDropbox } from "react-icons/si";
 export var tablaHistorial = [
   {
     folio: "EVENTO-001",
-    sede: "Queréretaro",
+    sede: "Querétaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
@@ -43,7 +43,7 @@ export var tablaHistorial = [
   },
   {
     folio: "EVENTO-002",
-    sede: "Queréretaro",
+    sede: "Querétaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
@@ -54,7 +54,7 @@ export var tablaHistorial = [
   },
   {
     folio: "EVENTO-003",
-    sede: "Queréretaro",
+    sede: "Querétaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
@@ -65,7 +65,7 @@ export var tablaHistorial = [
   },
   {
     folio: "EVENTO-004",
-    sede: "Queréretaro",
+    sede: "Querétaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
@@ -76,7 +76,7 @@ export var tablaHistorial = [
   },
   {
     folio: "EVENTO-005",
-    sede: "Queréretaro",
+    sede: "Querétaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
@@ -87,7 +87,7 @@ export var tablaHistorial = [
   },
   {
     folio: "EVENTO-006",
-    sede: "Queréretaro",
+    sede: "Querétaro",
     solicitante: "James Blue",
     fecha_solicitud: "1 Jun 2023",
     fecha_entrega: "14 Jun 2023",
