@@ -125,7 +125,7 @@ function addSolicitud(props) {
     <Flex direction='column' pt={{ base: "120px", md: "75px", lg: "100px" }}>
  
       <Grid templateColumns={{ sm: "12fr", xl:  "12fr" }} gap='22px'>
-        <Card p='16px'>
+        <Card p='40px'>
           <CardHeader p='12px 5px' mb='12px'>
             <Text fontSize='lg' color={textColor} fontWeight='bold'>
               Crear una nueva solicitud
@@ -133,84 +133,75 @@ function addSolicitud(props) {
           </CardHeader>
           <CardBody px='5px'>
             <Flex direction='column'>
-            <SimpleGrid spacing={60} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
-              <Card>
-                <CardHeader>
-                  <Heading size='md'>Fecha de solicitud</Heading>
-                </CardHeader>
-                <CardBody>
-                  <Text>{hoy.toLocaleDateString()}</Text>
-                </CardBody>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Heading size='md'>Solicitante </Heading>
-                </CardHeader>
-                <CardBody>
-                  <Text>Usuario</Text>
-                </CardBody>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Heading size='md'> Sede</Heading>
-                </CardHeader>
-                <CardBody>
-                  <Text>Sede actual</Text>
-                </CardBody>
-              </Card>
-            </SimpleGrid>
+              <SimpleGrid spacing={60} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
+                <div>
+                  <CardHeader>
+                    <Heading size='sm' fontWeight='500' mb='6px'>Fecha de solicitud</Heading>
+                  </CardHeader>
+                  <CardBody>
+                    <Text >{hoy.toLocaleDateString()}</Text>
+                  </CardBody>
+                </div>
+                <div>
+                  <CardHeader>
+                    <Heading size='sm' fontWeight='500' mb='6px'>Solicitante </Heading>
+                  </CardHeader>
+                  <CardBody>
+                    <Text>Usuario</Text>
+                  </CardBody>
+                </div>
+                <div>
+                  <CardHeader>
+                    <Heading size='sm' fontWeight='500' mb='6px'> Sede</Heading>
+                  </CardHeader>
+                  <CardBody>
+                    <Text>Sede actual</Text>
+                  </CardBody>
+                </div>
+              </SimpleGrid>
         
-
-            <Text mb='8px'>DESCRIPCIÓN GENERAL Y/O DEPÓSITO</Text>
-            <Textarea
-              
+              <Text fontSize='lg' color={textColor} fontWeight='bold' mt="16px">Descripción general y/o depósito</Text>
+              <Textarea
               onChange={handleChange}
-              placeholder='DESCRIPCIÓN GENERAL Y/O DEPÓSITO'
+              placeholder='Descripción'
               size='sm'
               id="descripcion"
               name="descripcion"
-            />
+              resize='none'/>
 
-            <Card spacing={60} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'> 
               <FormComplemento></FormComplemento>
-            </Card>
-              <div className="container">
-                  <div className="row">
-                      <div className="col-lg-3">
-                        <Text mb='8px'>NECESIDADES DEL EVENTO</Text>
-                        <Select name="necesidades" id="necesidades" isMulti options={optionsEventos} value={selectedOptions} onChange={handleSelect} />
-                      </div>
-                      <div className="col-lg-9" key="elementos">
-                          <div className="container">
-                            <div className="row">
-                                  {
-                                    selectedOptions.map((item,index) => (
-                                      <div className="col-lg-4">
-                                        <Card key={item[index]}>
-                                          <Text mb='8px'>Ingresar datos para {item.value}</Text>
-                                          <Input name={'detalle_'+index} id={'detalle_'+index} htmlSize={4} placeholder="detalles a considerar"  />
-                                          <Text mb='8px'>{item[index]}</Text>
-                                          <Input name={'cantidad_'+index} id={'cantidad_'+index} htmlSize={4} placeholder="Cantidad"  />
-                                        </Card>
-                                      </div>                                      
-                                    ))
-                                  }
-                            </div>
-                          </div>
-                           
-                      </div>
+              <div className="container" style={{padding:0, marginTop: '15px'}}>
+                <div className="row">
+                  <div className="col-lg-12">
+                    <Text mb='8px'>Necesidades del evento</Text>
+                    <Select name="necesidades" id="necesidades" isMulti options={optionsEventos} value={selectedOptions} onChange={handleSelect}/>
                   </div>
-              </div><br></br><br></br>
-                      <div className="row">
-                      <button type="submit" className="btn btn-info">Guardar</button>
-                      </div>
-
-                           
-
+                  
+                    {
+                      selectedOptions.map((item,index) => (
+                        <div className="col-lg-12" key="elementos">
+                          <Text mt='15px' mb='8px'>Ingresar datos para {item.value}</Text>
+                          <div style={{display:'flex', justifyContent:'space-between'}}>
+                            <Input name={'detalle_'+index} id={'detalle_'+index} htmlSize={4} placeholder="detalles a considerar" style={{width:'80%'}}/>
+                            <Text mb='8px'>{item[index]}</Text>
+                            <Input name={'cantidad_'+index} id={'cantidad_'+index} htmlSize={4} placeholder="Cantidad"  style={{width:'19%'}}/>
+                          </div>
+                        </div>                                      
+                      ))
+                    }
+                  <div className="col-lg-10">
+                  </div>
+                  <div className="col-lg-2" style={{marginTop:"15px"}}>
+                    <button type="submit" className="btn btn-info" style={{width:'100%', backgroundColor:'#B4A46C', border:'none', color:'white', borderRadius:'27px'}}>Guardar</button>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                
+              </div>
             </Flex>
           </CardBody>
         </Card>
-        
       </Grid>
     </Flex>
     </form>

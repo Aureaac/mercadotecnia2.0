@@ -4,16 +4,18 @@ import {
   Button,
   Flex,
   HStack,
-  Link, Stack, Text, useColorMode, useColorModeValue
+  Link,
+  Stack,
+  Text,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import {
-  ArgonLogoDark,
   ArgonLogoLight,
-  ChakraLogoBlue, ChakraLogoDark,
-  ChakraLogoLight, DocumentIcon,
+  ChakraLogoBlue,
+  DocumentIcon,
   HomeIcon,
   PersonIcon,
-  RocketIcon
 } from "components/Icons/Icons";
 import { SidebarResponsive } from "components/Sidebar/Sidebar";
 import React from "react";
@@ -46,7 +48,7 @@ export default function AuthNavbar(props) {
       fontWeight="bold"
       justifyContent="center"
       alignItems="center"
-      color={mainText}
+      color='black'
     >
       <Stack direction="row" spacing="12px" align="center" justify="center">
         <ArgonLogoLight w="74px" h="27px" />
@@ -57,7 +59,7 @@ export default function AuthNavbar(props) {
         {logoText}
       </Text>
     </Link>
-  ); 
+  );
   hamburgerColor = { base: "white" };
   var linksAuth = (
     <HStack display={{ sm: "none", lg: "flex" }}>
@@ -68,9 +70,9 @@ export default function AuthNavbar(props) {
           me="0px"
           px="0px"
           me={{ sm: "2px", md: "16px" }}
-          color={navbarIcon}
+          color='black'
           variant="no-effects"
-          leftIcon={<HomeIcon color={navbarIcon} w="12px" h="12px" me="0px" />}
+          leftIcon={<HomeIcon color='black' w="12px" h="12px" me="0px" />}
         >
           <Text>Inicio</Text>
         </Button>
@@ -82,29 +84,13 @@ export default function AuthNavbar(props) {
           me="0px"
           px="0px"
           me={{ sm: "2px", md: "16px" }}
-          color={navbarIcon}
+          color='black'
           variant="no-effects"
           leftIcon={
-            <PersonIcon color={navbarIcon} w="12px" h="12px" me="0px" />
+            <PersonIcon color='black' w="12px" h="12px" me="0px" />
           }
         >
           <Text>Profile</Text>
-        </Button>
-      </NavLink>
-      <NavLink to="/auth/signup">
-        <Button
-          fontSize="sm"
-          ms="0px"
-          me="0px"
-          px="0px"
-          me={{ sm: "2px", md: "16px" }}
-          color={navbarIcon}
-          variant="no-effects"
-          leftIcon={
-            <RocketIcon color={navbarIcon} w="12px" h="12px" me="0px" />
-          }
-        >
-          <Text>Sign Up</Text>
         </Button>
       </NavLink>
       <NavLink to="/auth/signin">
@@ -143,8 +129,6 @@ export default function AuthNavbar(props) {
       maxW="90%"
       alignItems="center"
       zIndex="3"
-    >
-      
-    </Flex>
+    ></Flex>
   );
 }

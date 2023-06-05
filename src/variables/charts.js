@@ -118,7 +118,7 @@ export const lineChartOptions = {
     },
     labels: {
       style: {
-        colors: "#fff",
+        colors: "#333",
         fontSize: "12px",
       },
     },
@@ -126,7 +126,7 @@ export const lineChartOptions = {
   yaxis: {
     labels: {
       style: {
-        colors: "#fff",
+        colors: "#333",
         fontSize: "12px",
       },
     },
@@ -148,7 +148,7 @@ export const lineChartOptions = {
       opacityTo: 0,
       stops: [],
     },
-    colors: ["#fff", "#3182CE"],
+    colors: ["#B4A46C", "#3182CE"],
   },
-  colors: ["#fff", "#3182CE"],
+  colors: ["#B4A46C18", "#3182CE18"],
 };
