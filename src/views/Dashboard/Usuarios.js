@@ -1,118 +1,92 @@
 // Chakra imports
 import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Text,
-    Button,
-    Tr,
-    Th,
-    Td,
     Flex,
-    useColorModeValue,
-    TableCaption,
-    TableContainer,
-  } from '@chakra-ui/react'
-  import { ViewIcon } from '@chakra-ui/icons'
-
-// Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import TablesProjectRow from "components/Tables/TablesProjectRow";
-import React from "react";
-import { tablaUsuarios, tablesTableData } from "variables/general";
-
-function Tables() {
-  const textColor = useColorModeValue("gray.700", "white");
-  const borderColor = useColorModeValue("gray.200", "gray.600");
-
-  return (
-    <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
-      
-      <Card
-        my="22px"
-        overflowX={{ sm: "scroll", xl: "hidden" }}
-        pb="0px"
-      >
-        <CardHeader p="6px 0px 22px 0px">
-          <Flex direction="column">
-            <Text fontSize="lg" color={textColor} fontWeight="bold" pb=".5rem">
-              Historial Solicitudes 2
-            </Text>
-          </Flex>
-        </CardHeader>
-        <CardBody>
-            <TableContainer>
-                <Table size='sm'>
-                    <Thead>
-                    <Tr>
-                        <Th>FOLIO</Th>
-                        <Th>SEDE</Th>
-                        <Th>FECHA SOLICITUD</Th>
-                        <Th>FECHA EVENTO</Th>
-                        <Th>DETALLES</Th>
-                        <Th>CAPTURISTA</Th>
-                        <Th>ESTATUS</Th>
-                        <Th>ACCIONES</Th>
-                    </Tr>
-                    </Thead>
-                    <Tbody>
-                    <Tr>
-                        <Td>QRO-1</Td>
-                        <Td>Querétaro</Td>
-                        <Td>25 de mayo de 2023</Td>
-                        <Td>03 de junio de 2023</Td>
-                        <Td>SOLICITUD DE EVENTO</Td>
-                        <Td>KARLA LOPEZ</Td>
-                        <Td>APROBADA</Td>
-                        <Td><Button title='Detalles' leftIcon={<ViewIcon />} colorScheme='teal' variant='solid'></Button></Td>
-
-                        
-                    </Tr>
-                    <Tr>
-                        <Td>QRO-2</Td>
-                        <Td>Querétaro</Td>
-                        <Td>30 de mayo de 2023</Td>
-                        <Td>15 de junio de 2023</Td>
-                        <Td>SOLICITUD DE EVENTO DE DESLINDE<br></br> EN ETAPA 11 DE CMQ PARA EL 15 DE JUNIO</Td>
-                        <Td>KARLA LOPEZ</Td>
-                        <Td>APROBADA</Td>
-                        <Td><Button title='Detalles' leftIcon={<ViewIcon />} colorScheme='teal' variant='solid'></Button></Td>
-                        
-                        
-                    </Tr>
-                    <Tr>
-                        <Td>QRO-3</Td>
-                        <Td>Querétaro</Td>
-                        <Td>18 de mayo de 2023</Td>
-                        <Td>01 de junio de 2023</Td>
-                        <Td>SOLICITUD DE EVENTO</Td>
-                        <Td>KARLA LOPEZ</Td>
-                        <Td>SOLICITUD ENTREGADA	</Td>
-                        <Td><Button title='Detalles' leftIcon={<ViewIcon />} colorScheme='teal' variant='solid'></Button></Td>
-                        
-                    </Tr>
-                    </Tbody>
-                    <Tfoot>
-                    <Tr>
-                        <Th>FOLIO</Th>
-                        <Th>SEDE</Th>
-                        <Th>FECHA SOLICITUD</Th>
-                        <Th>FECHA EVENTO</Th>
-                        <Th>DETALLES</Th>
-                        <Th>CAPTURISTA</Th>
-                        <Th>ESTATUS</Th>
-                        <Th>ACCIONES</Th>
-                    </Tr>
-                    </Tfoot>
-                </Table>
-            </TableContainer>
-        </CardBody>
-      </Card>
-    </Flex>
+    Table,
+    Tbody,
+    Text,
+    Th,
+    Thead,
+    Tr,
+    Button,
+    MdBuild,
+    useColorModeValue
+  } from "@chakra-ui/react";
+  // Custom components
+  import Card from "components/Card/Card.js";
+  import CardBody from "components/Card/CardBody.js";
+  import CardHeader from "components/Card/CardHeader.js";
+  import TablesUsersRow from "components/Tables/TablesUsersRow";
+  import React from "react";
+  import { tablaUsuarios, tablesTableData } from "variables/general";
+  
+  function Usuarios() {
+    const textColor = useColorModeValue("gray.700", "white");
+    const borderColor = useColorModeValue("gray.200", "gray.600");
+  
+    return (
+      <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
+        
+        <Card
+          my="22px"
+          overflowX={{ sm: "scroll", xl: "hidden" }}
+          pb="0px"
+        >
+          <CardHeader p="6px 0px 22px 0px">
+            <Flex direction="column">
+              <Text fontSize="lg" color={textColor} fontWeight="bold" pb=".5rem">
+               Usuarios
+              </Text>
+            </Flex>
+          </CardHeader>
+          <CardBody>
+            <Table variant="simple" color={textColor}>
+              <Thead>
+                <Tr my=".8rem" pl="0px">
+                  <Th pl="0px" color="gray.400" borderColor={borderColor}>ID</Th>
+                  <Th color="gray.400" borderColor={borderColor}>Nombre</Th>
+                  <Th color="gray.400" borderColor={borderColor}>Correo</Th>
+                  <Th color="gray.400" borderColor={borderColor}>Puesto</Th>
+                  <Th color="gray.400" borderColor={borderColor}>Sede</Th>
+                  <Th color="gray.400" borderColor={borderColor}>Jefe Directo</Th>
+                  <Th color="gray.400" borderColor={borderColor}>Estatus</Th>
+  
+                  <Th>Acciones</Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                {tablaUsuarios.map((row, index, arr) => {
+                  return (
+                    <TablesUsersRow
+   
+                      id={row.id}
+                      nombre={row.nombre}
+                      correo={row.correo}
+                      puesto={row.puesto}
+                      sede={row.sede}
+                      jefe_directo={row.jefe_directo}
+                      estatus={row.estatus}
+                      accion={<Button  colorScheme='pink' variant='solid'>
+                      Settings
+                    </Button>}
+                      
+                      isLast={index === arr.length - 1 ? true : false}
+                      key={index}
+                    />
+                  );
+                })}
+              </Tbody>
+            </Table>
+          </CardBody>
+        </Card>
+  
+  
+   
+      </Flex>
+  
   );
-}
-
-export default Tables;
+    
+   
+  }
+  
+  export default Usuarios;
+  

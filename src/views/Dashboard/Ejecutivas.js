@@ -15,11 +15,11 @@ import {
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
-import TablesProjectRow from "components/Tables/TablesProjectRow";
+import TablesEjecutivasRow from "components/Tables/TablesEjecutivasRow";
 import React from "react";
-import { tablaHistorial, tablesTableData } from "variables/general";
+import { tablaEjecutivas, tablesTableData } from "variables/general";
 
-function Tables() {
+function Ejecutivas() {
   const textColor = useColorModeValue("gray.700", "white");
   const borderColor = useColorModeValue("gray.200", "gray.600");
 
@@ -34,7 +34,7 @@ function Tables() {
         <CardHeader p="6px 0px 22px 0px">
           <Flex direction="column">
             <Text fontSize="lg" color={textColor} fontWeight="bold" pb=".5rem">
-              Historial Solicitudes
+             Ejecutivas
             </Text>
           </Flex>
         </CardHeader>
@@ -42,31 +42,24 @@ function Tables() {
           <Table variant="simple" color={textColor}>
             <Thead>
               <Tr my=".8rem" pl="0px">
-                <Th pl="0px" color="gray.400" borderColor={borderColor}>Folio</Th>
+                <Th pl="0px" color="gray.400" borderColor={borderColor}>ID</Th>
+                <Th color="gray.400" borderColor={borderColor}>Nombre</Th>
+                <Th color="gray.400" borderColor={borderColor}>Subdirección</Th>
+                <Th color="gray.400" borderColor={borderColor}>Área</Th>
                 <Th color="gray.400" borderColor={borderColor}>Sede</Th>
-                <Th color="gray.400" borderColor={borderColor}>Solicitante</Th>
-                <Th color="gray.400" borderColor={borderColor}>Fecha solicitud</Th>
-                <Th color="gray.400" borderColor={borderColor}>Fecha entrega</Th>
-                <Th color="gray.400" borderColor={borderColor}>Detalles</Th>
-                <Th color="gray.400" borderColor={borderColor}>Progreso</Th>
-                <Th color="gray.400" borderColor={borderColor}>Estatus</Th>
-
                 <Th>Acciones</Th>
               </Tr>
             </Thead>
             <Tbody>
-              {tablaHistorial.map((row, index, arr) => {
+              {tablaEjecutivas.map((row, index, arr) => {
                 return (
-                  <TablesProjectRow
+                  <TablesEjecutivasRow
  
-                    folio={row.folio}
+                    id_ejecutiva={row.id_ejecutiva}
+                    nombre={row.nombre}
+                    subdireccion={row.subdireccion}
+                    area={row.area}
                     sede={row.sede}
-                    solicitante={row.solicitante}
-                    fecha_solicitud={row.fecha_solicitud}
-                    fecha_entrega={row.fecha_entrega}
-                    detalles={row.detalles}
-                    progreso={row.progreso}
-                    estatus={row.estatus}
                     accion={<Button  colorScheme='pink' variant='solid'>
                     Settings
                   </Button>}
@@ -80,8 +73,14 @@ function Tables() {
           </Table>
         </CardBody>
       </Card>
+
+
+ 
     </Flex>
-  );
+
+);
+  
+ 
 }
 
-export default Tables;
+export default Ejecutivas;

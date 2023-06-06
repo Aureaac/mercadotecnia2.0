@@ -20,13 +20,10 @@ import {
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
-import TablesProjectRow from "components/Tables/TablesProjectRow";
 import React from "react";
-import { tablaHistorial, tablesTableData } from "variables/general";
 
 function Tables() {
   const textColor = useColorModeValue("gray.700", "white");
-  const borderColor = useColorModeValue("gray.200", "gray.600");
 
   return (
     <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
@@ -39,7 +36,7 @@ function Tables() {
         <CardHeader p="6px 0px 22px 0px">
           <Flex direction="column">
             <Text fontSize="lg" color={textColor} fontWeight="bold" pb=".5rem">
-              Historial Solicitudes 2
+              Historial General
             </Text>
           </Flex>
         </CardHeader>

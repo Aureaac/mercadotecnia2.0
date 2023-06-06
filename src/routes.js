@@ -1,12 +1,13 @@
 // import
 import React, { Component }  from 'react';
 import Dashboard from "views/Dashboard/Dashboard.js";
-import Tables from "views/Dashboard/Tables.js";
+import Tables from "views/Dashboard/EnProceso.js";
 import Billing from "views/Dashboard/Billing.js";
-import Profile from "views/Dashboard/Profile.js";
-import SignIn from "views/Pages/SignIn.js";
-import addSolicitud from "views/Dashboard/addSolicitud.js";
+import NuevaSolicitud from "views/Dashboard/NuevaSolicitud";
+import Nueva from "views/Dashboard/addSolicitud.js";
 import Historial from "views/Dashboard/Historial.js";
+import Usuarios from "views/Dashboard/Usuarios.js";
+import Ejecutivas from "views/Dashboard/Ejecutivas.js";
 
 import {
   HomeIcon,
@@ -26,23 +27,23 @@ var dashRoutes = [
     layout: "/admin",
   },
   {
-    path: "/profile",
+    path: "/nueva",
     name: "Nueva Solicitud",
-    icon: <StatsIcon color='inherit' />,
-    component: addSolicitud,
+    icon: <DocumentIcon color='inherit' />,
+    component: Nueva,
     props: 1,
     layout: "/admin",
   },
   {
     path: "/tables",
     name: "En proceso",
-    icon: <CreditIcon color='inherit' />,
+    icon: <StatsIcon  color='inherit' />,
     component: Tables,
     props: 0,
     layout: "/admin",
   },
   {
-    path: "/historial_2",
+    path: "/historial",
     name: "Historial",
     icon: <CreditIcon color='inherit' />,
     component: Historial,
@@ -55,21 +56,21 @@ var dashRoutes = [
     state: "pageCollapse",
     views: [
       {
-        path: "/profile",
+        path: "/usuarios",
         name: "Usuarios",
         icon: <PersonIcon color='inherit' />,
         secondaryNavbar: true,
-        component: Profile,
+        component: Usuarios,
         props: 0,
         layout: "/admin",
       },
       {
-        path: "/signin",
+        path: "/ejecutivas",
         name: "Ejecutivas",
         icon: <DocumentIcon color='inherit' />,
-        component: SignIn,
+        component: Ejecutivas,
         props: 0,
-        layout: "/auth",
+        layout: "/admin",
       },
 
     ],
