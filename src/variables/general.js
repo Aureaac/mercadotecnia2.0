@@ -98,6 +98,42 @@ export var tablaHistorial = [
   },
 ];
 
+export var tablaHistorial2 = [
+  {
+    folio: "QRO-1",
+    sede: "Querétaro",
+    fecha_solicitud: "25 de mayo de 2023",
+    fecha_entrega: "03 de junio de 2023",
+    detalles: "SOLICITUD DE EVENTO",
+    capturista: "KARLA LOPEZ",
+    progreso: 60,
+    estatus: "APROBADA",
+    accion: ""
+  },
+  {
+    folio: "QRO-2",
+    sede: "Querétaro",
+    fecha_solicitud: "30 de mayo de 2023",
+    fecha_entrega: "15 de junio de 2023",
+    detalles: "SOLICITUD DE EVENTO DE DESLINDE EN ETAPA 11 DE CMQ PARA EL 15 DE JUNIO",
+    capturista: "KARLA LOPEZ",
+    progreso: 40,
+    estatus: "APROBADA",
+    accion: ""
+  },
+  {
+    folio: "QRO-3",
+    sede: "Querétaro",
+    fecha_solicitud: "15 de mayo de 2023",
+    fecha_entrega: "01 de junio de 2023",
+    detalles: "SOLICITUD DE EVENTO",
+    capturista: "KARLA LOPEZ",
+    progreso: 70,
+    estatus: "SOLICITUD ENTREGADA",
+    accion: ""
+  },
+];
+
 export const invoicesData = [
   {
     date: "March, 01, 2020",

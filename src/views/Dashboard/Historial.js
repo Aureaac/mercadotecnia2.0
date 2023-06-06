@@ -3,16 +3,12 @@ import {
     Table,
     Thead,
     Tbody,
-    Tfoot,
     Text,
     Button,
     Tr,
     Th,
-    Td,
     Flex,
     useColorModeValue,
-    TableCaption,
-    TableContainer,
   } from '@chakra-ui/react'
   import { ViewIcon } from '@chakra-ui/icons'
 
@@ -22,7 +18,7 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import TablesProjectRow from "components/Tables/TablesProjectRow";
 import React from "react";
-import { tablaHistorial, tablesTableData } from "variables/general";
+import { tablaHistorial2 } from "variables/general";
 
 function Tables() {
   const textColor = useColorModeValue("gray.700", "white");
@@ -39,76 +35,47 @@ function Tables() {
         <CardHeader p="6px 0px 22px 0px">
           <Flex direction="column">
             <Text fontSize="lg" color={textColor} fontWeight="bold" pb=".5rem">
-              Historial Solicitudes 2
+              Historial solicitudes
             </Text>
           </Flex>
         </CardHeader>
         <CardBody>
-            <TableContainer>
-                <Table size='sm'>
-                    <Thead>
-                    <Tr>
-                        <Th>FOLIO</Th>
-                        <Th>SEDE</Th>
-                        <Th>FECHA SOLICITUD</Th>
-                        <Th>FECHA EVENTO</Th>
-                        <Th>DETALLES</Th>
-                        <Th>CAPTURISTA</Th>
-                        <Th>ESTATUS</Th>
-                        <Th>ACCIONES</Th>
-                    </Tr>
-                    </Thead>
-                    <Tbody>
-                    <Tr>
-                        <Td>QRO-1</Td>
-                        <Td>Querétaro</Td>
-                        <Td>25 de mayo de 2023</Td>
-                        <Td>03 de junio de 2023</Td>
-                        <Td>SOLICITUD DE EVENTO</Td>
-                        <Td>KARLA LOPEZ</Td>
-                        <Td>APROBADA</Td>
-                        <Td><Button title='Detalles' leftIcon={<ViewIcon />} colorScheme='teal' variant='solid'></Button></Td>
-
-                        
-                    </Tr>
-                    <Tr>
-                        <Td>QRO-2</Td>
-                        <Td>Querétaro</Td>
-                        <Td>30 de mayo de 2023</Td>
-                        <Td>15 de junio de 2023</Td>
-                        <Td>SOLICITUD DE EVENTO DE DESLINDE<br></br> EN ETAPA 11 DE CMQ PARA EL 15 DE JUNIO</Td>
-                        <Td>KARLA LOPEZ</Td>
-                        <Td>APROBADA</Td>
-                        <Td><Button title='Detalles' leftIcon={<ViewIcon />} colorScheme='teal' variant='solid'></Button></Td>
-                        
-                        
-                    </Tr>
-                    <Tr>
-                        <Td>QRO-3</Td>
-                        <Td>Querétaro</Td>
-                        <Td>18 de mayo de 2023</Td>
-                        <Td>01 de junio de 2023</Td>
-                        <Td>SOLICITUD DE EVENTO</Td>
-                        <Td>KARLA LOPEZ</Td>
-                        <Td>SOLICITUD ENTREGADA	</Td>
-                        <Td><Button title='Detalles' leftIcon={<ViewIcon />} colorScheme='teal' variant='solid'></Button></Td>
-                        
-                    </Tr>
-                    </Tbody>
-                    <Tfoot>
-                    <Tr>
-                        <Th>FOLIO</Th>
-                        <Th>SEDE</Th>
-                        <Th>FECHA SOLICITUD</Th>
-                        <Th>FECHA EVENTO</Th>
-                        <Th>DETALLES</Th>
-                        <Th>CAPTURISTA</Th>
-                        <Th>ESTATUS</Th>
-                        <Th>ACCIONES</Th>
-                    </Tr>
-                    </Tfoot>
-                </Table>
-            </TableContainer>
+          <Table variant="simple" color={textColor}>
+            <Thead>
+              <Tr my=".8rem" pl="0px">
+                <Th pl="0px" color="gray.400" borderColor={borderColor}>Folio</Th>
+                <Th color="gray.400" borderColor={borderColor}>Sede</Th>
+                <Th color="gray.400" borderColor={borderColor}>Fecha solicitud</Th>
+                <Th color="gray.400" borderColor={borderColor}>Fecha entrega</Th>
+                <Th color="gray.400" borderColor={borderColor}>Detalles</Th>
+                <Th color="gray.400" borderColor={borderColor}>Capturista</Th>
+                <Th color="gray.400" borderColor={borderColor}>Progreso</Th>
+                <Th color="gray.400" borderColor={borderColor}>Estatus</Th>
+                <Th>Acciones</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              {tablaHistorial2.map((row, index, arr) => {
+                return (
+                  <TablesProjectRow
+                    folio={row.folio}
+                    sede={row.sede}
+                    fecha_solicitud={row.fecha_solicitud}
+                    fecha_entrega={row.fecha_entrega}
+                    detalles={row.detalles}
+                    capturista={row.capturista}
+                    progreso={row.progreso}
+                    estatus={row.estatus}
+                    accion={<Button  colorScheme='pink' variant='solid'>
+                      Settings
+                    </Button>}
+                    isLast={index === arr.length - 1 ? true : false}
+                    key={index}
+                      />
+                );
+              })}
+            </Tbody>
+            </Table>
         </CardBody>
       </Card>
     </Flex>

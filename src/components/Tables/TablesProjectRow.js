@@ -20,37 +20,37 @@ function DashboardTableRow(props) {
   return (
     <Tr>
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
           {folio}
         </Text>
       </Td>
 
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
           {sede}
         </Text>
       </Td>
       
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
           {solicitante}
         </Text>
       </Td>
  
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
           {fecha_solicitud}
         </Text>
       </Td>
 
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
           {fecha_entrega}
         </Text>
       </Td>
      
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
           {detalles}
         </Text>
       </Td>
@@ -59,7 +59,7 @@ function DashboardTableRow(props) {
           <Text
             fontSize="md"
             color="blue.500"
-            fontWeight="bold"
+            fontWeight="300"
             pb=".2rem"
           >{`${progreso}%`}</Text>
           <Progress
@@ -71,7 +71,7 @@ function DashboardTableRow(props) {
         </Flex>
       </Td >
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
           {estatus}
         </Text>
       </Td>

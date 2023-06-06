@@ -108,7 +108,6 @@ function addSolicitud(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(values)
     tablaHistorial.push(values)
    
 }

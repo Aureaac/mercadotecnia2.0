@@ -8,7 +8,6 @@ import {
   Thead,
   Tr,
   Button,
-  MdBuild,
   useColorModeValue
 } from "@chakra-ui/react";
 // Custom components
@@ -17,7 +16,7 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import TablesProjectRow from "components/Tables/TablesProjectRow";
 import React from "react";
-import { tablaHistorial, tablesTableData } from "variables/general";
+import { tablaHistorial } from "variables/general";
 
 function Tables() {
   const textColor = useColorModeValue("gray.700", "white");
@@ -34,7 +33,7 @@ function Tables() {
         <CardHeader p="6px 0px 22px 0px">
           <Flex direction="column">
             <Text fontSize="lg" color={textColor} fontWeight="bold" pb=".5rem">
-              Historial Solicitudes
+              Historial solicitudes
             </Text>
           </Flex>
         </CardHeader>
@@ -58,7 +57,6 @@ function Tables() {
               {tablaHistorial.map((row, index, arr) => {
                 return (
                   <TablesProjectRow
- 
                     folio={row.folio}
                     sede={row.sede}
                     solicitante={row.solicitante}
@@ -70,7 +68,6 @@ function Tables() {
                     accion={<Button  colorScheme='pink' variant='solid'>
                     Settings
                   </Button>}
-                    
                     isLast={index === arr.length - 1 ? true : false}
                     key={index}
                   />
