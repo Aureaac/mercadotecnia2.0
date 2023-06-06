@@ -29,7 +29,7 @@ import {
 } from "react-icons/fa";
 import { SiDropbox } from "react-icons/si";
 
-export var tablaHistorial = [
+export var tablaProceso = [
   {
     folio: "EVENTO-001",
     sede: "Querétaro",
@@ -97,6 +97,124 @@ export var tablaHistorial = [
     accion:""
   },
 ];
+
+
+
+export var tablaUsuarios = [
+  {
+    id: "001",
+    nombre: "GRISELLE ALVAREZ HERNANDEZ	",
+    correo: "especialista.merca5@ciudadmaderas.com",
+    puesto: "Subdirección Merca",
+    sede: "Tijuana",
+    jefe_directo: "NA",
+    estatus: 'Activa',
+    accion:""
+  },
+  {
+    id: "002",
+    nombre: "NOHEMI DE LOS ANGELES CASTILLO	",
+    correo: "asistente.gerencia.tij1@ciudadmaderas.com	",
+    puesto: "Capturista",
+    sede: "Tijuana",
+    jefe_directo: "Francisco Borrajo",
+    estatus: 'Activa',
+    accion:""
+  },
+  {
+    id: "003",
+    nombre: "ANDREA HERNÁNDEZ RESÉNDIZ	",
+    correo: "andrea.hernandez@fundacionlamat.com.mx	",
+    puesto: "Dirección Área",
+    sede: "Querétaro",
+    jefe_directo: "NA",
+    estatus: 'Activa',
+    accion:""
+  },
+  {
+    id: "004",
+    nombre: "EMILIO CESAR FERNANDEZ VERA	",
+    correo: "emilio.fernandez@ciudadmaderas.com	",
+    puesto: "Subdirector Ventas	",
+    sede: "León",
+    jefe_directo: "RIGEL SILVA",
+    estatus: 'Activa',
+    accion:""
+  },
+  {
+    id: "005",
+    nombre: "ELOISA VELAZQUES MUÑOZ	",
+    correo: "asistente.construccion@ciudadmaderas.com	",
+    puesto: "Asistente Director",
+    sede: "Querétaro",
+    jefe_directo: "NA",
+    estatus: 'Activa',
+    accion:""
+  },
+  {
+    id: "006",
+    nombre: "VALERIA NICOLE GARCIA",
+    correo: "especialista.merca12@ciudadmaderas.com",
+    puesto: "Ejecutivo Mercadotecnia",
+    sede: "Querétaro",
+    jefe_directo: "NA",
+    estatus: 'Activa',
+    accion:""
+  },
+];
+
+
+export var tablaEjecutivas = [
+  {
+    id_ejecutiva: "590",
+    nombre: "PERLA IZAMAR CRUZ RAMIREZ",
+    subdireccion: "QRO - DANIELA OLVERA ALEGRIA	",
+    area: "Fundación, Nassca, Admon",
+    sede: "Todas",
+    accion:""
+  },
+  {
+    id_ejecutiva: "596",
+    nombre: "LUCERO ESTELA BARRON SERRANO",
+    subdireccion: "SLP - MARIBEL ZAPATA CUELLAR		",
+    area: "Ventas",
+    sede: "SLP",
+    accion:""
+  },
+  {
+    id_ejecutiva: "530",
+    nombre: "VICTOR MANUEL MUÑOZ MEDINA    ",
+    subdireccion: "QRO - ESTEFANIA BASS		",
+    area: "TI, Contabilidad, Construcción",
+    sede: "QRO, CDMX, TIJ",
+    accion:""
+  },
+  {
+    id_ejecutiva: "210",
+    nombre: "JUAN CARLOS PEDROZA DIAZ    ",
+    subdireccion: "MTY - SAMANTA ABDUL OTERO		",
+    area: "Todas",
+    sede: "MTY, TIJ, TEX, HOU",
+    accion:""
+  },
+  {
+    id_ejecutiva: "980",
+    nombre: "CYNTHIA RODRIGUEZ DUEÑAS    ",
+    subdireccion: "PEN - MARISOL MENDOZA FLORES    ",
+    area: "Ventas, Admon, Postventa",
+    sede: "PEN, CAN",
+    accion:""
+  },
+  {
+    id_ejecutiva: "156",
+    nombre: "NIDIA YANET PEÑA MORENO    ",
+    subdireccion: "LEON - YURITZY PEÑA MORENO		",
+    area: "Ventas",
+    sede: "LEON",
+    accion:""
+  },
+];
+
 
 export const invoicesData = [
   {

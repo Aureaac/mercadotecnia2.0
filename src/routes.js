@@ -1,12 +1,13 @@
 // import
 import React, { Component }  from 'react';
 import Dashboard from "views/Dashboard/Dashboard.js";
-import Tables from "views/Dashboard/Tables.js";
+import Tables from "views/Dashboard/EnProceso.js";
 import Billing from "views/Dashboard/Billing.js";
-import Profile from "views/Dashboard/Profile.js";
-import SignIn from "views/Pages/SignIn.js";
-import addSolicitud from "views/Dashboard/addSolicitud.js";
+import NuevaSolicitud from "views/Dashboard/NuevaSolicitud";
+import Nueva from "views/Dashboard/addSolicitud.js";
 import Historial from "views/Dashboard/Historial.js";
+import Usuarios from "views/Dashboard/Usuarios.js";
+import Ejecutivas from "views/Dashboard/Ejecutivas.js";
 
 import {
   HomeIcon,
@@ -26,17 +27,17 @@ var dashRoutes = [
     layout: "/admin",
   },
   {
-    path: "/profile",
-    name: "Nueva solicitud",
-    icon: <StatsIcon color='inherit' />,
-    component: addSolicitud,
+    path: "/nueva",
+    name: "Nueva Solicitud",
+    icon: <DocumentIcon color='inherit' />,
+    component: Nueva,
     props: 1,
     layout: "/admin",
   },
   {
     path: "/tables",
-    name: "Solicitudes",
-    icon: <CreditIcon color='inherit' />,
+    name: "En proceso",
+    icon: <StatsIcon  color='inherit' />,
     component: Tables,
     props: 0,
     layout: "/admin",
@@ -55,21 +56,21 @@ var dashRoutes = [
     state: "pageCollapse",
     views: [
       {
-        path: "/profile",
+        path: "/usuarios",
         name: "Usuarios",
         icon: <PersonIcon color='inherit' />,
         secondaryNavbar: true,
-        component: Profile,
+        component: Usuarios,
         props: 0,
         layout: "/admin",
       },
       {
-        path: "/signin",
+        path: "/ejecutivas",
         name: "Ejecutivas",
         icon: <DocumentIcon color='inherit' />,
-        component: SignIn,
+        component: Ejecutivas,
         props: 0,
-        layout: "/auth",
+        layout: "/admin",
       },
 
     ],

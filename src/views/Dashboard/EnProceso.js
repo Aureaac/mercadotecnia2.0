@@ -26,8 +26,8 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import TablesProjectRow from "components/Tables/TablesProjectRow";
-import React,{useRef} from "react";
-import { tablaHistorial, tablesTableData } from "variables/general";
+import React from "react";
+import { tablaProceso, tablesTableData } from "variables/general";
 
 function Tables() {
   const textColor = useColorModeValue("gray.700", "white");
@@ -47,7 +47,7 @@ function Tables() {
         <CardHeader p="6px 0px 22px 0px">
           <Flex direction="column">
             <Text fontSize="lg" color={textColor} fontWeight="bold" pb=".5rem">
-              Historial Solicitudes
+             Solicitudes en proceso
             </Text>
           </Flex>
         </CardHeader>
@@ -68,7 +68,7 @@ function Tables() {
               </Tr>
             </Thead>
             <Tbody>
-              {tablaHistorial.map((row, index, arr) => {
+              {tablaProceso.map((row, index, arr) => {
                 return (
                   <TablesProjectRow
                      folio={row.folio}
@@ -115,7 +115,10 @@ function Tables() {
                     </ModalContent>
                 </Modal>
     </Flex>
-  );
+
+);
+  
+ 
 }
 
 export default Tables;
