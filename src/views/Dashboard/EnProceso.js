@@ -22,6 +22,7 @@ import {
 import { ViewIcon } from '@chakra-ui/icons'
 
 // Custom components
+import { useRef } from 'react';
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
