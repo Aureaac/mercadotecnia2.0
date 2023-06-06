@@ -26,8 +26,7 @@ import { DownloadIcon,DragHandleIcon,StarIcon,CalendarIcon,InfoOutlineIcon,Quest
 import { useEffect,useRef } from 'react';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 // Custom components
-import { useRef } from 'react';
-import Card from "components/Card/Card.js";
+ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import TablesProjectRow from "components/Tables/TablesProjectRow";
