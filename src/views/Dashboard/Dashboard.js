@@ -71,7 +71,7 @@ export default function Dashboard() {
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize='lg' color={textColor} fontWeight='bold'>
-                    $53,897
+                    1,478
                   </StatNumber>
                 </Flex>
               </Stat>
@@ -86,9 +86,9 @@ export default function Dashboard() {
             </Flex>
             <Text color='gray.400' fontSize='sm'>
               <Text as='span' color='green.400' fontWeight='bold'>
-                +3.48%{" "}
+                21%{" "}
               </Text>
-              Solicitudes en aprobadas
+              Porcentaje aprobadas
             </Text>
           </Flex>
         </Card>
@@ -110,7 +110,7 @@ export default function Dashboard() {
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize='lg' color={textColor} fontWeight='bold'>
-                    $3,200
+                    1,789
                   </StatNumber>
                 </Flex>
               </Stat>
@@ -125,9 +125,9 @@ export default function Dashboard() {
             </Flex>
             <Text color='gray.400' fontSize='sm'>
               <Text as='span' color='green.400' fontWeight='bold'>
-                +5.2%{" "}
+                26%{" "}
               </Text>
-              Solicitudes en proceso
+              Porcentaje en proceso
             </Text>
           </Flex>
         </Card>
@@ -149,7 +149,7 @@ export default function Dashboard() {
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize='lg' color={textColor} fontWeight='bold'>
-                    +2,503
+                    153
                   </StatNumber>
                 </Flex>
               </Stat>
@@ -163,10 +163,10 @@ export default function Dashboard() {
               </IconBox>
             </Flex>
             <Text color='gray.400' fontSize='sm'>
-              <Text as='span' color='red.500' fontWeight='bold'>
-                -2.82%{" "}
+              <Text as='span' color='green.400' fontWeight='bold'>
+                2%{" "}
               </Text>
-              Solicitudes canceladas
+              Porcentaje canceladas
             </Text>
           </Flex>
         </Card>
@@ -188,7 +188,7 @@ export default function Dashboard() {
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize='lg' color={textColor} fontWeight='bold'>
-                    $173,000
+                    3,540
                   </StatNumber>
                 </Flex>
               </Stat>
@@ -203,7 +203,7 @@ export default function Dashboard() {
             </Flex>
             <Text color='gray.400' fontSize='sm'>
               <Text as='span' color='green.400' fontWeight='bold'>
-                +8.12%{" "}
+                51%{" "}
               </Text>
               Solicitudes finalizadas
             </Text>

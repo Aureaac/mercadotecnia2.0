@@ -34,12 +34,12 @@ export function SearchBar(props) {
             }></IconButton>
         }
       />
-      <Input
+      {/* <Input
         variant='search'
         fontSize='xs'
         bg={inputBg}
         placeholder='Type here...'
-      />
+      /> */}
     </InputGroup>
   );
 }
