@@ -2,9 +2,7 @@ import React from "react";
 import {
   Tr,
   Td,
-  Flex,
   Text,
-  Progress,
   Icon,
   Button,
   useColorModeValue,
@@ -12,65 +10,50 @@ import {
 import { FaEllipsisV } from "react-icons/fa";
 
 function DashboardTableRow(props) {
-  const {folio,sede,solicitante,fecha_solicitud,fecha_entrega,detalles,progreso,estatus,isLast} = props;
+  const {id, nombre, correo, puesto, sede, jefe_directo, estatus,isLast} = props;
   const textColor = useColorModeValue("gray.500", "white");
   const borderColor = useColorModeValue("gray.200", "gray.600");
 
   return (
     <Tr>
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
-          {folio}
+        <Text fontSize="sm" color={textColor} fontWeight="bold" pb=".5rem">
+          {id}
         </Text>
       </Td>
 
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
-          {sede}
+        <Text fontSize="sm" color={textColor} fontWeight="bold" pb=".5rem">
+          {nombre}
         </Text>
       </Td>
       
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
-          {solicitante}
+        <Text fontSize="sm" color={textColor} fontWeight="bold" pb=".5rem">
+          {correo}
         </Text>
       </Td>
  
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
-          {fecha_solicitud}
+        <Text fontSize="sm" color={textColor} fontWeight="bold" pb=".5rem">
+          {puesto}
         </Text>
       </Td>
 
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
-          {fecha_entrega}
+        <Text fontSize="sm" color={textColor} fontWeight="bold" pb=".5rem">
+          {sede}
         </Text>
       </Td>
      
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
-          {detalles}
+        <Text fontSize="sm" color={textColor} fontWeight="bold" pb=".5rem">
+          {jefe_directo}
         </Text>
       </Td>
+
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Flex direction="column">
-          <Text
-            fontSize="md"
-            color="blue.500"
-            fontWeight="300"
-            pb=".2rem"
-          >{`${progreso}%`}</Text>
-          <Progress
-            colorScheme="blue"
-            size="xs"
-            value={progreso}
-            borderRadius="15px"
-          />
-        </Flex>
-      </Td >
-      <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="md" color='#333' fontWeight="300" pb=".5rem">
+        <Text fontSize="sm" color={textColor} fontWeight="bold" pb=".5rem">
           {estatus}
         </Text>
       </Td>

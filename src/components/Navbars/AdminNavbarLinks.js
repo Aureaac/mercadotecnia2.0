@@ -19,7 +19,7 @@ import avatar3 from "assets/img/avatars/avatar3.png";
 import { ArgonLogoDark, ArgonLogoLight, ChakraLogoDark, ChakraLogoLight, ProfileIcon, SettingsIcon } from "components/Icons/Icons";
 // Custom Components
 import { ItemContent } from "components/Menu/ItemContent";
-import { SearchBar } from "components/Navbars/SearchBar/SearchBar";
+// import { SearchBar } from "components/Navbars/SearchBar/SearchBar";
 import { SidebarResponsive } from "components/Sidebar/Sidebar";
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -53,7 +53,7 @@ export default function HeaderLinks(props) {
       w={{ sm: "100%", md: "auto" }}
       alignItems='center'
       flexDirection='row'>
-      <SearchBar me='18px' />
+      {/* <SearchBar me='18px' /> */}
       <NavLink to='/auth/signin'>
         <Button
           ms='0px'
@@ -75,7 +75,7 @@ export default function HeaderLinks(props) {
               ""
             )
           }>
-          <Text display={{ sm: "none", md: "flex" }}>Sign out</Text>
+          <Text display={{ sm: "none", md: "flex" }}>Cerrar sesión</Text>
         </Button>
       </NavLink>
       <SidebarResponsive

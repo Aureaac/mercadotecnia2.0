@@ -41,7 +41,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { IoDocumentsSharp } from "react-icons/io5";
-import { tablaHistorial } from "variables/general";
+import { tablaProceso } from "variables/general";
 function addSolicitud(props) {
 
   console.log(props)

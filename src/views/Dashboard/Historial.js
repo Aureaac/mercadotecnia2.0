@@ -9,21 +9,26 @@ import {
     Th,
     Flex,
     useColorModeValue,
-  } from '@chakra-ui/react'
-  import { ViewIcon } from '@chakra-ui/icons'
+} from '@chakra-ui/react'
+import { ViewIcon } from '@chakra-ui/icons'
+import { useEffect,useRef } from 'react';
 
-// Custom components
+  // Custom components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
-import TablesProjectRow from "components/Tables/TablesProjectRow";
 import React from "react";
 import { tablaHistorial2 } from "variables/general";
 
 function Tables() {
   const textColor = useColorModeValue("gray.700", "white");
   const borderColor = useColorModeValue("gray.200", "gray.600");
-
+  /** */
+  
+  const initialRef = useRef(null)
+  const finalRef = useRef(null)
+  const [size, setSize] = React.useState('md')
+/** */
   return (
     <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
       
@@ -35,7 +40,7 @@ function Tables() {
         <CardHeader p="6px 0px 22px 0px">
           <Flex direction="column">
             <Text fontSize="lg" color={textColor} fontWeight="bold" pb=".5rem">
-              Historial solicitudes
+              Historial Solicitudes
             </Text>
           </Flex>
         </CardHeader>
@@ -78,6 +83,7 @@ function Tables() {
             </Table>
         </CardBody>
       </Card>
+                
     </Flex>
   );
 }
