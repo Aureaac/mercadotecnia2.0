@@ -9,8 +9,18 @@ import {
   Tr,
   Button,
   MdBuild,
-  useColorModeValue
+  useColorModeValue,
+  useDisclosure,
+    Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
 } from "@chakra-ui/react";
+import { ViewIcon } from '@chakra-ui/icons'
+
 // Custom components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
@@ -22,10 +32,13 @@ import { tablaProceso, tablesTableData } from "variables/general";
 function Tables() {
   const textColor = useColorModeValue("gray.700", "white");
   const borderColor = useColorModeValue("gray.200", "gray.600");
-
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const initialRef = useRef(null)
+  const finalRef = useRef(null)
+  const [size, setSize] = React.useState('md')
   return (
     <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
-      
+      <Button onClick={onOpen}>ver solicitud</Button>
       <Card
         my="22px"
         overflowX={{ sm: "scroll", xl: "hidden" }}
@@ -58,8 +71,7 @@ function Tables() {
               {tablaProceso.map((row, index, arr) => {
                 return (
                   <TablesProjectRow
- 
-                    folio={row.folio}
+                     folio={row.folio}
                     sede={row.sede}
                     solicitante={row.solicitante}
                     fecha_solicitud={row.fecha_solicitud}
@@ -80,7 +92,28 @@ function Tables() {
           </Table>
         </CardBody>
       </Card>
+      <Modal
+                    initialFocusRef={initialRef}
+                    finalFocusRef={finalRef}
+                    isOpen={isOpen}
+                    onClose={onClose}
+                    size='lg'
+                >
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader>INFORMACIÓN DE LA SOLICITUD</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                       
+                        
+                    </ModalBody>
 
+                    <ModalFooter>
+                    <Button title='Detalles' leftIcon={<ViewIcon />} colorScheme='teal' variant='solid'></Button>
+                        <Button onClick={onClose}>Cerrar</Button>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
     </Flex>
 
 );
