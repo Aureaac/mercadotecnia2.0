@@ -5,13 +5,15 @@ import {
     Tbody,
     Text,
     Button,
+    Icon,
     Tr,
     Th,
     Flex,
     useColorModeValue,
 } from '@chakra-ui/react'
 import { ViewIcon } from '@chakra-ui/icons'
-import { useEffect,useRef } from 'react';
+import { FaEye } from "react-icons/fa";
+import { useRef } from 'react';
 
   // Custom components
 import Card from "components/Card/Card.js";
@@ -19,6 +21,8 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import React from "react";
 import { tablaHistorial2 } from "variables/general";
+import TablesProjectRow from "components/Tables/TablesProjectRow";
+
 
 function Tables() {
   const textColor = useColorModeValue("gray.700", "white");
@@ -71,9 +75,11 @@ function Tables() {
                     capturista={row.capturista}
                     progreso={row.progreso}
                     estatus={row.estatus}
-                    accion={<Button  colorScheme='pink' variant='solid'>
-                      Settings
-                    </Button>}
+                    accion={
+                      <Button p="0px" bg="transparent" variant="no-effects">
+                        <Icon as={FaEye} color="gray.400" cursor="pointer" />
+                      </Button>
+                    }
                     isLast={index === arr.length - 1 ? true : false}
                     key={index}
                       />

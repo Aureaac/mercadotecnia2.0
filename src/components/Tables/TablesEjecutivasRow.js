@@ -17,31 +17,31 @@ function DashboardTableRow(props) {
   return (
     <Tr>
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="sm" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="sm" color='#333' fontWeight="300" pb=".5rem">
           {id_ejecutiva}
         </Text>
       </Td>
 
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="sm" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="sm" color='#333' fontWeight="300" pb=".5rem">
           {nombre}
         </Text>
       </Td>
       
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="sm" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="sm" color='#333' fontWeight="300" pb=".5rem">
           {subdireccion}
         </Text>
       </Td>
  
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="sm" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="sm" color='#333' fontWeight="300" pb=".5rem">
           {area}
         </Text>
       </Td>
 
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Text fontSize="sm" color={textColor} fontWeight="bold" pb=".5rem">
+        <Text fontSize="sm" color='#333' fontWeight="300" pb=".5rem">
           {sede}
         </Text>
       </Td>

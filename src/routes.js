@@ -8,6 +8,7 @@ import Nueva from "views/Dashboard/addSolicitud.js";
 import Historial from "views/Dashboard/Historial.js";
 import Usuarios from "views/Dashboard/Usuarios.js";
 import Ejecutivas from "views/Dashboard/Ejecutivas.js";
+import SignIn from "views/Pages/SignIn.js";
 
 import {
   HomeIcon,
@@ -15,6 +16,9 @@ import {
   CreditIcon,
   PersonIcon,
   DocumentIcon,
+  SettingsIcon,
+  RocketIcon,
+  CartIcon
 } from "components/Icons/Icons";
 
 var dashRoutes = [
@@ -45,7 +49,7 @@ var dashRoutes = [
   {
     path: "/historial",
     name: "Historial",
-    icon: <CreditIcon color='inherit' />,
+    icon: <RocketIcon color='inherit' />,
     component: Historial,
     props: 0,
     layout: "/admin",
@@ -67,13 +71,20 @@ var dashRoutes = [
       {
         path: "/ejecutivas",
         name: "Ejecutivas",
-        icon: <DocumentIcon color='inherit' />,
+        icon: <PersonIcon color='inherit' />,
         component: Ejecutivas,
         props: 0,
         layout: "/admin",
-      },
-
+      },      
     ],
+  },
+  {
+    path: "/signin",
+    name: "Cerrar sesión",
+    icon: <SettingsIcon color='inherit' />,
+    component: SignIn,
+    props: 0,
+    layout: "/auth",
   },
 ];
 export default dashRoutes;

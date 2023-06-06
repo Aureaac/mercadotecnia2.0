@@ -42,7 +42,7 @@ import {
     const [size, setSize] = React.useState('md')
     return (
       <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
-        <Button onClick={onOpen}>Agregar nuevo usuario</Button>
+        <Button onClick={onOpen} borderRadius='27px'>Agregar nuevo usuario</Button>
         <Card
           my="22px"
           overflowX={{ sm: "scroll", xl: "hidden" }}

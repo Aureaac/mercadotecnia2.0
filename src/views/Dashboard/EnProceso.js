@@ -11,13 +11,14 @@ import {
   MdBuild,
   useColorModeValue,
   useDisclosure,
-    Modal,
+  Modal,
   ModalOverlay,
   ModalContent,
   ModalHeader,
   ModalFooter,
   ModalBody,
   ModalCloseButton,
+  Icon,
   InputGroup,
   Input ,
   InputRightElement
@@ -32,6 +33,8 @@ import CardHeader from "components/Card/CardHeader.js";
 import TablesProjectRow from "components/Tables/TablesProjectRow";
 import React from "react";
 import { tablaProceso, tablesTableData } from "variables/general";
+import { FaEllipsisV, FaThumbsUp, FaThumbsDown, FaRegPauseCircle, FaFilePdf } from "react-icons/fa";
+
 
 function Tables() {
   const textColor = useColorModeValue("gray.700", "white");
@@ -45,7 +48,7 @@ function Tables() {
 
   return (
     <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
-      <Button onClick={onOpen}>ver solicitud</Button>
+      <Button onClick={onOpen} borderRadius='27px' fontWeight='bold'>Ver solicitud</Button>
       <Card
         my="22px"
         overflowX={{ sm: "scroll", xl: "hidden" }}
@@ -62,14 +65,14 @@ function Tables() {
           <Table variant="simple" color={textColor}>
             <Thead>
               <Tr my=".8rem" pl="0px">
-                <Th pl="0px" color="gray.400" borderColor={borderColor}>Folio</Th>
-                <Th color="gray.400" borderColor={borderColor}>Sede</Th>
-                <Th color="gray.400" borderColor={borderColor}>Solicitante</Th>
-                <Th color="gray.400" borderColor={borderColor}>Fecha solicitud</Th>
-                <Th color="gray.400" borderColor={borderColor}>Fecha entrega</Th>
-                <Th color="gray.400" borderColor={borderColor}>Detalles</Th>
-                <Th color="gray.400" borderColor={borderColor}>Progreso</Th>
-                <Th color="gray.400" borderColor={borderColor}>Estatus</Th>
+                <Th pl="0px" color="gray.400" borderColor={borderColor} textAlign='center'>Folio</Th>
+                <Th color="gray.400" borderColor={borderColor} textAlign='center'>Sede</Th>
+                <Th color="gray.400" borderColor={borderColor} textAlign='center'>Solicitante</Th>
+                <Th color="gray.400" borderColor={borderColor} textAlign='center'>Fecha solicitud</Th>
+                <Th color="gray.400" borderColor={borderColor} textAlign='center'>Fecha entrega</Th>
+                <Th color="gray.400" borderColor={borderColor} textAlign='center'>Detalles</Th>
+                <Th color="gray.400" borderColor={borderColor} textAlign='center'>Progreso</Th>
+                <Th color="gray.400" borderColor={borderColor} textAlign='center'>Estatus</Th>
 
                 <Th>Acciones</Th>
               </Tr>
@@ -86,9 +89,19 @@ function Tables() {
                     detalles={row.detalles}
                     progreso={row.progreso}
                     estatus={row.estatus}
-                    accion={<Button  colorScheme='pink' variant='solid'>
-                    Settings
-                  </Button>}
+                    accion={
+                      <div style={{display:'flex'}}>
+                        <Button p="0px" bg="transparent" variant="no-effects">
+                          <Icon as={FaRegPauseCircle} color="gray.400" cursor="pointer" />
+                        </Button>
+                        <Button p="0px" variant="no-effects">
+                          <Icon as={FaThumbsUp} color="green" opacity='0.5' cursor="pointer" />
+                        </Button>
+                        <Button p="0px" variant="no-effects">
+                          <Icon as={FaThumbsDown} color="red" opacity='0.5' cursor="pointer" />
+                        </Button>
+                      </div>
+                    }
                     
                     isLast={index === arr.length - 1 ? true : false}
                     key={index}
@@ -100,83 +113,81 @@ function Tables() {
         </CardBody>
       </Card>
       <Modal
-                    initialFocusRef={initialRef}
-                    finalFocusRef={finalRef}
-                    isOpen={isOpen}
-                    onClose={onClose}
-                    size='lg'
-                >
-                    <ModalOverlay />
-                    <ModalContent>
-                    <ModalHeader>INFORMACIÓN DE LA SOLICITUD</ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                    <Tabs>
-  <TabList>
-    <Tab>INFORMACIÓN</Tab>
-    <Tab>OBSERVACIONES</Tab>
-    <Tab>HISTORIAL</Tab>
-  </TabList>
-
-  <TabPanels>
-    <TabPanel>
-             <div className="container">
-                          <div className="row">
-                              <div className="col-lg-12 text-end">
-                              <Button title='Detalles' leftIcon={<DownloadIcon />} colorScheme='teal' variant='solid'>Descargar PDF</Button>
-                              </div>
-                              <div className="col-lg-6" fontSize='xs'>
-                                <p fontSize='xs'><DragHandleIcon></DragHandleIcon> FOLIO: QRO35</p>
-                                <p fontSize='xs'><CalendarIcon></CalendarIcon> CREACIÓN: 2019-07-22 16:00:00</p>
-                                <p><StarIcon></StarIcon> SOLICITANTE: ANA LILIA HERNÁNDEZ</p>
-                                <p><InfoOutlineIcon></InfoOutlineIcon> SEDE: Querétaro</p>
-                              </div>
-                              <div className="col-lg-6" fontSize='xs'>
-                                  <p><InfoOutlineIcon></InfoOutlineIcon> LUGAR EVENTO: Casa club del condominio Olmo en CMQ</p>
-                                  <p><CalendarIcon></CalendarIcon>  FECHA EVENTO: 2019-07-26</p>
-                                  <p><TimeIcon></TimeIcon> HORARIO 12:00 - 18:00</p>
-                                  <p><QuestionIcon></QuestionIcon> INVITADOS: 55 </p>
-                              </div>
-
-                              <p><b>DESCRIPCIÓN GENERAL:</b>Se realiza el evento para llevar a algunos prospectos y que vivan el concepto Ciudad Maderas y poder concretar unas ventas</p>
-
-                                <b>REQUERIMIENTOS:</b>
-                                <p>SIN DATOS REQUERIDOS</p>
-                          </div>
-               </div>  
-    </TabPanel>
-    <TabPanel>
-          <InputGroup size='md'>
-            <Input
-              pr='4.5rem'
-              type={show ? 'text' : 'password'}
-              placeholder='COMENTAR'
-            />
-            <InputRightElement width='7.1rem'>
-              <Button title="Comentar" leftIcon={<ChatIcon />} h='2.75rem' size='sm' onClick={handleClick}>
-                {show ? 'Hide' : 'Comentar'}
-              </Button>
-            </InputRightElement>
-          </InputGroup>
-    </TabPanel>
-    <TabPanel>
-      <h6>HISTORIAL DE MOVIMIENTOS</h6>
-      <p className="text-warning">SIN MOVIMIENTOS REALIZADOS</p>
-    </TabPanel>
-  </TabPanels>
-</Tabs>
-                      
-                        
-                    </ModalBody>
-
-                    <ModalFooter>
-                    
-                        <Button onClick={onClose}>Cerrar</Button>
-                    </ModalFooter>
-                    </ModalContent>
-                </Modal>
-    </Flex>
-
+        initialFocusRef={initialRef}
+        finalFocusRef={finalRef}
+        isOpen={isOpen}
+        onClose={onClose}
+        size='lg'
+      >
+      <ModalOverlay />
+      <ModalContent>
+      <ModalHeader>INFORMACIÓN DE LA SOLICITUD</ModalHeader>
+      <ModalCloseButton />
+      <ModalBody>
+      <Tabs>
+        <TabList>
+          <Tab>INFORMACIÓN</Tab>
+          <Tab>OBSERVACIONES</Tab>
+          <Tab>HISTORIAL</Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel>
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-6 align-items-end" fontSize='xs' style={{marginBottom:'10px'}}>
+                  <p fontSize='xs'>FOLIO. QRO35</p>
+                </div>
+                <div className="col-lg-6 text-end" style={{marginBottom:'10px'}}>
+                  <Button title='Detalles' bg='#FC4136' color='white' fontWeight='300' mb='15px'>
+                    <Icon as={FaFilePdf} color="white" cursor="pointer" mr='5px' />Descargar
+                  </Button>
+                </div>
+                <div className="col-lg-12" fontSize='xs' style={{marginBottom:'10px'}}>
+                  <p><InfoOutlineIcon></InfoOutlineIcon> LUGAR EVENTO. Casa club del condominio Olmo en CMQ</p>
+                </div>
+                <div className="col-lg-12" fontSize='xs' style={{marginBottom:'10px'}}>
+                  <p fontSize='xs'><CalendarIcon></CalendarIcon> CREACIÓN: 2019-07-22 16:00:00</p>
+                  <p><StarIcon></StarIcon> SOLICITANTE. ANA LILIA HERNÁNDEZ</p>
+                  <p><InfoOutlineIcon></InfoOutlineIcon> SEDE: Querétaro</p>
+                </div>
+                <div className="col-lg-12" fontSize='xs' style={{marginBottom:'10px'}}>
+                    <p><CalendarIcon></CalendarIcon>  FECHA EVENTO: 2019-07-26</p>
+                    <p><TimeIcon></TimeIcon> HORARIO 12:00 - 18:00</p>
+                    <p><QuestionIcon></QuestionIcon> INVITADOS: 55 </p>
+                </div>
+                <p style={{marginBottom:'10px'}}><b>DESCRIPCIÓN GENERAL. </b>Se realiza el evento para llevar a algunos prospectos y que vivan el concepto Ciudad Maderas y poder concretar unas ventas</p>
+                <b>REQUERIMIENTOS.</b>
+                <p>SIN DATOS REQUERIDOS</p>
+              </div>
+            </div>  
+          </TabPanel>
+          <TabPanel>
+            <InputGroup size='md'>
+              <Input
+                pr='4.5rem'
+                type={show ? 'text' : 'password'}
+                placeholder='COMENTAR'
+              />
+              <InputRightElement width='7.1rem'>
+                <Button title="Comentar" leftIcon={<ChatIcon />} h='2.75rem' size='sm' onClick={handleClick}>
+                  {show ? 'Hide' : 'Comentar'}
+                </Button>
+              </InputRightElement>
+            </InputGroup>
+          </TabPanel>
+          <TabPanel>
+            <h6>HISTORIAL DE MOVIMIENTOS</h6>
+            <p className="text-warning">SIN MOVIMIENTOS REALIZADOS</p>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>           
+    </ModalBody>
+    <ModalFooter>  
+      <Button onClick={onClose}>Cerrar</Button>
+    </ModalFooter>
+    </ModalContent>
+    </Modal>
+  </Flex>
 );
   
  

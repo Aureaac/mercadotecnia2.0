@@ -175,7 +175,7 @@ function addSolicitud(props) {
                         <div className="col-lg-12" key="elementos">
                           <Text mt='15px' mb='8px'>Ingresar datos para {item.value}</Text>
                           <div style={{display:'flex', justifyContent:'space-between'}}>
-                            <Input name={'detalle_'+index} id={'detalle_'+index} htmlSize={4} placeholder="detalles a considerar" style={{width:'80%'}}/>
+                            <Input name={'detalle_'+index} id={'detalle_'+index} htmlSize={4} placeholder="Detalles a considerar" style={{width:'80%'}}/>
                             <Text mb='8px'>{item[index]}</Text>
                             <Input name={'cantidad_'+index} id={'cantidad_'+index} htmlSize={4} placeholder="Cantidad"  style={{width:'19%'}}/>
                           </div>

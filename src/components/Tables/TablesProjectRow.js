@@ -12,7 +12,7 @@ import {
 import { FaEllipsisV } from "react-icons/fa";
 
 function DashboardTableRow(props) {
-  const {folio,sede,solicitante,fecha_solicitud,fecha_entrega,detalles,progreso,estatus,isLast} = props;
+  const {folio,sede,solicitante,fecha_solicitud,fecha_entrega,detalles,progreso,estatus,isLast,accion} = props;
   const textColor = useColorModeValue("gray.500", "white");
   const borderColor = useColorModeValue("gray.200", "gray.600");
 
@@ -77,9 +77,10 @@ function DashboardTableRow(props) {
        
 
       <Td borderBottom={isLast ? "none" : null} borderColor={borderColor}>
-        <Button p="0px" bg="transparent" variant="no-effects">
+        {accion}
+        {/* <Button p="0px" bg="transparent" variant="no-effects">
           <Icon as={FaEllipsisV} color="gray.400" cursor="pointer" />
-        </Button>
+        </Button> */}
       </Td>
     </Tr>
   );

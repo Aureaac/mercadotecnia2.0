@@ -107,7 +107,7 @@ export var tablaHistorial2 = [
     detalles: "SOLICITUD DE EVENTO",
     capturista: "KARLA LOPEZ",
     progreso: 60,
-    estatus: "APROBADA",
+    estatus: "Aprobada",
     accion: ""
   },
   {
@@ -118,7 +118,7 @@ export var tablaHistorial2 = [
     detalles: "SOLICITUD DE EVENTO DE DESLINDE EN ETAPA 11 DE CMQ PARA EL 15 DE JUNIO",
     capturista: "KARLA LOPEZ",
     progreso: 40,
-    estatus: "APROBADA",
+    estatus: "Aprobada",
     accion: ""
   },
   {
@@ -129,7 +129,7 @@ export var tablaHistorial2 = [
     detalles: "SOLICITUD DE EVENTO",
     capturista: "KARLA LOPEZ",
     progreso: 70,
-    estatus: "SOLICITUD ENTREGADA",
+    estatus: "Solicitud entregada",
     accion: ""
   },
 ];
